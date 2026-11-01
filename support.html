@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Support — Kiroku (記録)</title>
+  <meta name="description" content="Kiroku Help Center & Customer Support. Frequently asked questions, MyAnimeList sync assistance, reporting guides, and support contact information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0f0b15',
+              surface: '#181221',
+              card: '#201a2b',
+              border: 'rgba(255, 255, 255, 0.08)',
+              primary: '#8b5cf6',
+              accent: '#ec4899',
+              cyan: '#06b6d4',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            jp: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-bg text-slate-200 font-sans antialiased selection:bg-brand-primary selection:text-white min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <header class="border-b border-brand-border sticky top-0 z-50 backdrop-blur-xl bg-brand-bg/80">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <span class="text-2xl">🎌</span>
+        <span class="text-xl font-bold tracking-tight text-white group-hover:text-brand-primary transition">Kiroku <span class="font-jp text-sm text-brand-primary font-normal">記録</span></span>
+      </a>
+      <nav class="flex items-center gap-6 text-sm text-slate-400">
+        <a href="/" class="hover:text-white transition">Home</a>
+        <a href="/privacy" class="hover:text-white transition">Privacy</a>
+        <a href="/terms" class="hover:text-white transition">Terms</a>
+        <a href="/support" class="text-brand-primary font-medium">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="flex-1 max-w-4xl mx-auto px-6 py-12">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-primary border border-brand-primary/20 mb-4">
+        Official Support & Help Center
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">How can we help you?</h1>
+      <p class="text-slate-400 mt-3 text-base">
+        Have questions about your Kiroku account, Taste Match™, or need help with a report? We're here for you.
+      </p>
+
+      <div class="mt-6 flex justify-center">
+        <a href="mailto:support@kirokuapp.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-primary text-white font-semibold shadow-lg shadow-brand-primary/25 hover:bg-brand-primary/90 transition text-sm">
+          <span>✉️</span> Email Support: support@kirokuapp.com
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Help Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+        <div class="w-10 h-10 rounded-xl bg-brand-primary/20 text-brand-primary flex items-center justify-center text-xl mb-4">
+          ⚡
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">MyAnimeList Sync Assistance</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          To connect your account, head to <strong>Settings &rarr; Connect MyAnimeList</strong>. After authenticating securely via MAL OAuth in your browser, your anime and manga watchlists will automatically synchronize in the background.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+        <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center text-xl mb-4">
+          🎯
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">How Taste Match™ Works</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Taste Match compares your scores, completed titles, and genre affinities with other users using Pearson correlation and cosine similarity. Tap the Taste Match card on any user's profile to explore your synergy!
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+        <div class="w-10 h-10 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xl mb-4">
+          🛡️
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Reporting Objectionable Content</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Kiroku enforces zero tolerance for harassment. Tap the three dots (···) on any comment or profile to report it. Items with 3 reports are quarantined immediately, and reviewed by a moderator within 24 hours.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+        <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center text-xl mb-4">
+          🗑️
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Deleting Your Account & Data</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          You can permanently delete your account at any time directly in the app via <strong>Settings &rarr; Account &rarr; Delete account</strong>. This permanently revokes all third-party tokens and removes your personal data immediately.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion Style -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+
+      <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
+        <h4 class="font-semibold text-white">How do I change my theme or avatar?</h4>
+        <p class="text-sm text-slate-400 mt-2">
+          Open the <strong>Settings</strong> screen from your profile. You can switch between Light, Dark, or System mode, and tap on your avatar to choose from 12 iconic anime avatars.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
+        <h4 class="font-semibold text-white">Why are some anime covers blurred?</h4>
+        <p class="text-sm text-slate-400 mt-2">
+          Kiroku has a built-in sensitive content filter enabled by default. To unblur mild suggestive covers, visit <strong>Settings &rarr; Content & Moderation</strong> and toggle off the "Blur Sensitive Covers" option.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
+        <h4 class="font-semibold text-white">How do I export or share my Taste Match Story Card?</h4>
+        <p class="text-sm text-slate-400 mt-2">
+          Visit any friend's profile with whom you have scored compatibility. Tap the <strong>"Share Match Card"</strong> button to generate an Instagram/WhatsApp story card with your soulmate score!
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
+        <h4 class="font-semibold text-white">Still need assistance?</h4>
+        <p class="text-sm text-slate-400 mt-2">
+          Send us an email at <a href="mailto:support@kirokuapp.com" class="text-brand-primary underline">support@kirokuapp.com</a>. We reply to all inquiries within 24 to 48 hours.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border py-8 text-center text-xs text-slate-500 mt-12">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Kiroku (記録). All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="/privacy" class="hover:text-slate-300 transition">Privacy Policy</a>
+        <a href="/terms" class="hover:text-slate-300 transition">Terms of Service</a>
+        <a href="/support" class="text-brand-primary font-medium">Support</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Kiroku (記録)</title>
+  <meta name="description" content="Kiroku Privacy Policy. Details on how we collect, store, and protect user data with zero third-party ad tracking and full self-serve account deletion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0f0b15',
+              surface: '#181221',
+              card: '#201a2b',
+              border: 'rgba(255, 255, 255, 0.08)',
+              primary: '#8b5cf6',
+              accent: '#ec4899',
+              cyan: '#06b6d4',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            jp: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-bg text-slate-200 font-sans antialiased selection:bg-brand-primary selection:text-white min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <header class="border-b border-brand-border sticky top-0 z-50 backdrop-blur-xl bg-brand-bg/80">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <span class="text-2xl">🎌</span>
+        <span class="text-xl font-bold tracking-tight text-white group-hover:text-brand-primary transition">Kiroku <span class="font-jp text-sm text-brand-primary font-normal">記録</span></span>
+      </a>
+      <nav class="flex items-center gap-6 text-sm text-slate-400">
+        <a href="/" class="hover:text-white transition">Home</a>
+        <a href="/privacy" class="text-brand-primary font-medium">Privacy</a>
+        <a href="/terms" class="hover:text-white transition">Terms</a>
+        <a href="/support" class="hover:text-white transition">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-4xl mx-auto px-6 py-12">
+    <div class="mb-10 pb-8 border-b border-brand-border">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-primary border border-brand-primary/20 mb-4">
+        Apple Guideline 5.1.1 & GDPR Compliant
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Privacy Policy</h1>
+      <p class="text-slate-400 mt-2 text-sm">Last updated: November 1, 2026</p>
+    </div>
+
+    <div class="space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">1. Our Core Privacy Philosophy</h3>
+        <p>
+          At <strong>Kiroku</strong> (accessible via <strong>kirokuapp.com</strong> and the Kiroku mobile apps), we believe your anime and manga tastes are personal. 
+          <strong>We do not sell your personal data, and we do not track your activity across third-party websites or services for advertising purposes.</strong>
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">2. Information We Collect</h3>
+        <p>To provide our social anime tracking and Taste Match™ services, we collect minimal and necessary information:</p>
+        <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
+          <li><strong>Account Information:</strong> When you register via email, Google, or Apple, we store your username, email address, password hash (encrypted using bcrypt), and optional bio/avatar selection.</li>
+          <li><strong>Anime & Manga Library Activity:</strong> Your watch/read status (e.g. Watching, Completed), episode progress, personal ratings (1–10), and custom curated lists.</li>
+          <li><strong>Taste Match™ Data:</strong> Algorithmic vectors derived from your ratings and favorite genres to calculate compatibility percentages with friends.</li>
+          <li><strong>Third-Party Integrations:</strong> If you connect MyAnimeList (MAL), we store your MAL username and OAuth access tokens encrypted with AES-256-GCM.</li>
+          <li><strong>Device & Crash Diagnostics:</strong> Anonymous diagnostic information (app version, crash stack traces) collected via Sentry to fix bugs and improve stability. No personally identifiable information (PII) is included in crash reports.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">3. How We Use Your Information</h3>
+        <p>We use the data we collect solely for the following operational purposes:</p>
+        <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
+          <li>To maintain your account, authenticate your sessions, and secure your profile.</li>
+          <li>To synchronize your anime/manga progress across devices and with MyAnimeList.</li>
+          <li>To compute community recommendations and Taste Match™ compatibility scores.</li>
+          <li>To send essential transactional notifications (password resets, discussion replies, push notifications when followed).</li>
+          <li>To enforce our Community Guidelines and protect users against harassment and abusive behavior.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">4. No Third-Party Tracking & No Advertising</h3>
+        <p>
+          Kiroku does not display third-party behavioral advertisements. We do not use third-party analytics SDKs that track your activity across other applications or websites. Under Apple's App Tracking Transparency (ATT) framework, Kiroku does not track users.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">5. Public Profile Privacy</h3>
+        <p>
+          By default, other registered users can view your public profile (username, avatar, rank tier, badges, public lists, and anime scores). However, your private email address, real name, and authentication tokens are strictly private and are never exposed via our public API endpoints.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">6. Account & Data Deletion Guarantee (Apple 5.1.1(v))</h3>
+        <p>
+          You have full control over your data. In full compliance with Apple App Store Review Guidelines:
+        </p>
+        <div class="p-5 rounded-xl bg-brand-surface border border-brand-border mt-3 mb-3">
+          <p class="text-white font-semibold">Immediate Self-Serve Account Deletion:</p>
+          <p class="text-sm text-slate-300 mt-1">
+            You can permanently delete your account and all associated personal data directly within the Kiroku mobile app by opening 
+            <strong>Settings &rarr; Account &rarr; Delete account</strong>.
+          </p>
+        </div>
+        <p>
+          Upon confirming deletion:
+        </p>
+        <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300">
+          <li>Your personal identification records (email, username, name, avatar) are permanently anonymized/purged.</li>
+          <li>If you signed in with Apple, our servers invoke Apple's token revocation API (<code>/auth/revoke</code>) to sever all authorization links.</li>
+          <li>Your MAL tokens, device push notification tokens, and follower connections are permanently removed.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">7. Data Retention & Security</h3>
+        <p>
+          All data transmission between the mobile application and our servers is secured via HTTPS/TLS 1.3 encryption. Passwords and sensitive external tokens are encrypted using industry-standard hashing and AES-256-GCM encryption.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">8. Children's Privacy</h3>
+        <p>
+          Kiroku is rated 16+ on the App Store due to anime/manga themes and community interaction. We do not knowingly collect personal information from children under the age of 13. If we discover that a child under 13 has provided personal data, we will immediately delete that account.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold text-white mb-3">9. Contact Us</h3>
+        <p>
+          If you have any questions, requests, or privacy concerns regarding this policy, please reach out to our privacy officer at:
+          <br>
+          <a href="mailto:support@kirokuapp.com" class="text-brand-primary underline hover:text-white transition font-medium mt-1 inline-block">support@kirokuapp.com</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border py-8 text-center text-xs text-slate-500">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Kiroku (記録). All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="/privacy" class="text-brand-primary font-medium">Privacy Policy</a>
+        <a href="/terms" class="hover:text-slate-300 transition">Terms of Service</a>
+        <a href="/support" class="hover:text-slate-300 transition">Support</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

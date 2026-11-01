@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiroku (記録) — Next-Generation Social Anime & Manga Tracking Platform</title>
+  <meta name="description" content="Discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme music previews, track your watchlist with 1-tap MAL sync, and level up your otaku rank.">
+  <meta property="og:title" content="Kiroku (記録) — Anime & Manga Social Discovery">
+  <meta property="og:description" content="Discover your anime soulmates with Taste Match™, explore vertical Anime Reels, and track your watchlist.">
+  <meta property="og:url" content="https://kirokuapp.com">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0f0b15">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0f0b15',
+              surface: '#181221',
+              card: '#201a2b',
+              border: 'rgba(255, 255, 255, 0.08)',
+              primary: '#8b5cf6',
+              accent: '#ec4899',
+              cyan: '#06b6d4',
+              gold: '#fbbf24',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            jp: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glow-primary {
+      box-shadow: 0 0 60px -15px rgba(139, 92, 246, 0.4);
+    }
+    .glow-accent {
+      box-shadow: 0 0 60px -15px rgba(236, 72, 153, 0.35);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, #c4b5fd 70%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-slate-200 font-sans antialiased selection:bg-brand-primary selection:text-white min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="border-b border-brand-border sticky top-0 z-50 backdrop-blur-xl bg-brand-bg/85">
+    <div class="max-w-6xl mx-auto px-6 h-18 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <span class="text-3xl filter drop-shadow">🎌</span>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-brand-primary transition">
+            Kiroku <span class="font-jp text-sm text-brand-primary font-bold">記録</span>
+          </span>
+          <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Social Anime Platform</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#features" class="hover:text-white transition">Features</a>
+        <a href="#taste-match" class="hover:text-white transition">Taste Match™</a>
+        <a href="#reels" class="hover:text-white transition">Anime Reels</a>
+        <a href="/support" class="hover:text-white transition">Support</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="#download" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-primary text-white text-xs font-bold uppercase tracking-wider shadow-lg shadow-brand-primary/25 hover:bg-brand-primary/90 hover:scale-105 active:scale-95 transition">
+          Get the App
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-12 pb-24 md:pt-20 md:pb-32">
+    <!-- Ambient background glows -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-primary/20 blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/3 -right-20 w-[400px] h-[400px] bg-brand-accent/15 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-primary border border-brand-primary/30 mb-8 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span>
+          <span>Next-Generation Anime & Manga Social Discovery</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+          Your Anime Journey, <br>
+          <span class="gradient-text">Reimagined.</span>
+        </h1>
+
+        <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+          Leave outdated spreadsheets behind. Connect with anime soulmates through <span class="text-brand-primary font-semibold">Taste Match™</span>, preview iconic opening theme songs in <span class="text-brand-cyan font-semibold">Anime Reels</span>, and sync your entire MAL library in one tap.
+        </p>
+
+        <!-- CTA Download Badges -->
+        <div id="download" class="mt-10 flex flex-wrap justify-center items-center gap-4">
+          <!-- App Store Button -->
+          <a href="#" class="inline-flex items-center gap-3 px-6 py-3.5 rounded-2xl bg-white text-slate-900 font-bold hover:bg-slate-100 transition shadow-xl hover:scale-105 active:scale-95">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.15.65-2.83 1.44-.6.69-1.12 1.77-1.03 2.84 1.08.08 2.22-.57 2.85-1.41z"/>
+            </svg>
+            <div class="text-left leading-none">
+              <div class="text-[10px] font-medium text-slate-600 uppercase tracking-wider">Download on the</div>
+              <div class="text-base font-extrabold tracking-tight mt-0.5">App Store</div>
+            </div>
+          </a>
+
+          <!-- Google Play Button -->
+          <a href="#" class="inline-flex items-center gap-3 px-6 py-3.5 rounded-2xl bg-brand-surface border border-brand-border text-white font-bold hover:bg-brand-card transition shadow-xl hover:scale-105 active:scale-95">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.61-.954V2.768c.086-.363.298-.696.61-.954zm11.238 11.24L17.5 15.71l-11.89 6.864 9.237-9.52zm0-2.108L5.61 1.426 17.5 8.29l-2.653 2.656zm1.488 1.054l3.655-2.11a1.982 1.982 0 0 1 0 3.432l-3.655 2.11-1.054-1.054 1.054-1.378z"/>
+            </svg>
+            <div class="text-left leading-none">
+              <div class="text-[10px] font-medium text-slate-400 uppercase tracking-wider">Get it on</div>
+              <div class="text-base font-extrabold tracking-tight mt-0.5">Google Play</div>
+            </div>
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-4">Compatible with iOS 16+ & Android 12+. Rated 16+ on App Store.</p>
+      </div>
+
+      <!-- Hero Interactive Card Preview (CSS App Mockup) -->
+      <div class="mt-16 max-w-4xl mx-auto rounded-3xl bg-brand-card/90 border border-brand-border p-6 sm:p-8 backdrop-blur-2xl shadow-2xl relative glow-primary">
+        <div class="flex flex-col sm:flex-row items-center justify-between pb-6 border-b border-brand-border gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-xl shadow-lg">
+              🎌
+            </div>
+            <div>
+              <div class="text-white font-bold flex items-center gap-2">
+                <span>OtakuSync_99</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-brand-primary/20 text-brand-primary font-semibold border border-brand-primary/30">Senpai (Rütbe 5)</span>
+              </div>
+              <div class="text-xs text-slate-400">Level 42 &bull; 1,420 Episodes Tracked &bull; 18 Badges</div>
+            </div>
+          </div>
+          <!-- Taste Match Pill -->
+          <div class="px-4 py-2 rounded-2xl bg-gradient-to-r from-brand-primary/20 to-brand-accent/20 border border-brand-primary/40 flex items-center gap-2">
+            <span class="text-lg">💖</span>
+            <div class="text-left">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-brand-accent">Taste Compatibility</div>
+              <div class="text-sm font-extrabold text-white">94% Anime Soulmates</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini Feature Showcase Row inside App Mockup -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+          <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+            <div class="text-xs font-semibold text-brand-cyan uppercase tracking-wider mb-1">Anime Reels & Music</div>
+            <div class="font-bold text-white text-sm">Frieren: Beyond Journey's End</div>
+            <div class="text-xs text-slate-400 mt-1 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Playing: "Yuusha" by YOASOBI (OP 1)</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+            <div class="text-xs font-semibold text-brand-primary uppercase tracking-wider mb-1">Quick Increment</div>
+            <div class="font-bold text-white text-sm">Jujutsu Kaisen Season 2</div>
+            <div class="text-xs text-slate-400 mt-1 flex items-center justify-between">
+              <span>Episode 21 / 23</span>
+              <span class="px-2 py-0.5 rounded bg-brand-primary text-white font-bold text-xs">+1 Watched</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+            <div class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-1">MyAnimeList Sync</div>
+            <div class="font-bold text-white text-sm">Bidirectional OAuth</div>
+            <div class="text-xs text-emerald-400 mt-1 flex items-center gap-1">
+              <span>✓</span> 482 Anime & 124 Manga Synced
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Grid -->
+  <section id="features" class="py-20 border-t border-brand-border bg-brand-surface/40">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Crafted for the modern anime era.</h2>
+        <p class="text-slate-400 mt-3 text-base">Everything you need to track, discuss, and connect with anime culture in one pocket experience.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1: Taste Match -->
+        <div id="taste-match" class="p-8 rounded-3xl bg-brand-card border border-brand-border hover:border-brand-primary/50 transition group">
+          <div class="w-14 h-14 rounded-2xl bg-brand-primary/15 text-brand-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">
+            🎯
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Taste Match™ Engine</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Multi-factor scoring algorithm calculating weighted cosine genre affinity, Pearson rating correlation, and favorite character synergy to calculate 0–100% compatibility scores between fans.
+          </p>
+        </div>
+
+        <!-- Feature 2: Anime Reels -->
+        <div id="reels" class="p-8 rounded-3xl bg-brand-card border border-brand-border hover:border-brand-cyan/50 transition group">
+          <div class="w-14 h-14 rounded-2xl bg-brand-cyan/15 text-brand-cyan flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">
+            🎵
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Anime Reels & OP Audio</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Ditch endless browsing. Swipe through high-tempo vertical discovery feeds featuring 30-second opening and ending theme song previews, vinyl spin animations, and double-tap hearts.
+          </p>
+        </div>
+
+        <!-- Feature 3: Gamification -->
+        <div class="p-8 rounded-3xl bg-brand-card border border-brand-border hover:border-brand-gold/50 transition group">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/15 text-brand-gold flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">
+            🎌
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Gamified Otaku Journey</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Earn XP for tracking episodes and lists. Climb through 6 Japanese ranks from <em>Newbie</em> to <em>Go Touch Grass</em>, and unlock 18 specialty badges for binge-watching and genre mastery.
+          </p>
+        </div>
+
+        <!-- Feature 4: MAL Sync -->
+        <div class="p-8 rounded-3xl bg-brand-card border border-brand-border hover:border-brand-primary/50 transition group">
+          <div class="w-14 h-14 rounded-2xl bg-brand-primary/15 text-brand-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">
+            ⚡
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">1-Tap MyAnimeList Import</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Don't leave years of watch history behind. Seamless PKCE OAuth 2.0 bridge imports and synchronizes your entire anime & manga library with AES-256 encrypted credential protection.
+          </p>
+        </div>
+
+        <!-- Feature 5: Episode Discussions -->
+        <div class="p-8 rounded-3xl bg-brand-card border border-brand-border hover:border-brand-accent/50 transition group">
+          <div class="w-14 h-14 rounded-2xl bg-brand-accent/15 text-brand-accent flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">
+            💬
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Episode-Specific Discussions</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Discuss what just happened in Episode 5 without being spoiled for Episode 24. Filter discussion rooms by exact episode, tag fellow fans with @mentions, and toggle spoiler blur.
+          </p>
+        </div>
+
+        <!-- Feature 6: Privacy & Safety -->
+        <div class="p-8 rounded-3xl bg-brand-card border border-brand-border hover:border-emerald-500/50 transition group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">
+            🛡️
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Zero-Tolerance & Privacy</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Zero third-party advertising tracking. 24-hour moderation response guarantee, automated 3-strike profanity quarantine, sensitive content blur, and 1-tap self-serve account deletion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Footer Section -->
+  <section class="py-20 relative overflow-hidden text-center">
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <div class="p-10 sm:p-14 rounded-3xl bg-gradient-to-b from-brand-card to-brand-surface border border-brand-border shadow-2xl">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Ready to meet your anime twin?</h2>
+        <p class="text-slate-400 mt-3 max-w-lg mx-auto text-sm sm:text-base">
+          Join thousands of otaku tracking their journey with Kiroku. Free to download on iOS and Android.
+        </p>
+        <div class="mt-8 flex justify-center">
+          <a href="#download" class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-brand-primary text-white font-bold hover:bg-brand-primary/90 transition shadow-xl shadow-brand-primary/30 hover:scale-105 active:scale-95">
+            <span>🎌</span> Download Kiroku Today
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border py-12 text-sm text-slate-400 bg-brand-bg">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">🎌</span>
+        <div>
+          <span class="font-bold text-white">Kiroku (記録)</span>
+          <p class="text-xs text-slate-500 mt-0.5">&copy; 2026 Kiroku. All rights reserved.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm">
+        <a href="/privacy" class="hover:text-white transition">Privacy Policy</a>
+        <a href="/terms" class="hover:text-white transition">Terms of Service (EULA)</a>
+        <a href="/support" class="hover:text-white transition">Help & Support</a>
+        <a href="mailto:support@kirokuapp.com" class="text-brand-primary hover:underline">support@kirokuapp.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
