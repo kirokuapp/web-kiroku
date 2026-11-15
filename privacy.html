@@ -78,7 +78,8 @@
           <li><strong>Anime & Manga Library Activity:</strong> Your watch/read status (e.g. Watching, Completed), episode progress, personal ratings (1–10), and custom curated lists.</li>
           <li><strong>Taste Match™ Data:</strong> Algorithmic vectors derived from your ratings and favorite genres to calculate compatibility percentages with friends.</li>
           <li><strong>Third-Party Integrations:</strong> If you connect MyAnimeList (MAL), we store your MAL username and OAuth access tokens encrypted with AES-256-GCM.</li>
-          <li><strong>Device & Crash Diagnostics:</strong> Anonymous diagnostic information (app version, crash stack traces) collected via Sentry to fix bugs and improve stability. No personally identifiable information (PII) is included in crash reports.</li>
+          <li><strong>Push Notification Tokens:</strong> If you opt in to push notifications, we store your device push token via Apple Push Notification service (APNs) and Firebase Cloud Messaging (FCM) solely to deliver activity alerts (such as new followers or list likes).</li>
+          <li><strong>Device &amp; Crash Diagnostics:</strong> Diagnostic information (app version, crash stack traces, and an anonymous internal user UUID) collected via Sentry to fix bugs and improve stability. Your email address, name, and private credentials are never included in crash reports (<code>sendDefaultPii</code> is disabled).</li>
         </ul>
       </section>
 
@@ -118,6 +119,11 @@
           <p class="text-sm text-slate-300 mt-1">
             You can permanently delete your account and all associated personal data directly within the Kiroku mobile app by opening 
             <strong>Settings &rarr; Account &rarr; Delete account</strong>.
+          </p>
+          <p class="text-sm text-slate-300 mt-2">
+            If you have already uninstalled the app, you can request immediate account and data deletion via web/email by writing to 
+            <a href="mailto:support@kirokuapp.com?subject=Kiroku%20Account%20Deletion%20Request" class="text-brand-primary underline hover:text-white transition font-medium">support@kirokuapp.com</a> 
+            from your registered email address.
           </p>
         </div>
         <p>
@@ -169,3 +175,4 @@
 
 </body>
 </html>
+

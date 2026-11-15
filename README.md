@@ -22,3 +22,4 @@ Official website, App Store compliance pages, and legal documentation for **Kiro
    * **A Record:** `@` &rarr; `76.76.21.21`
    * **CNAME:** `www` &rarr; `cname.vercel-dns.com`
    * **CNAME:** `api` &rarr; `backend-kiroku-production.up.railway.app`
+
