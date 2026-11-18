@@ -1179,3 +1179,249 @@ body {
   pointer-events: none;
   outline: none;
 }
+
+/* --- Waitlist Form & Coming Soon Store Badges --- */
+.alf-waitlist-wrap {
+  width: 100%;
+  max-width: 480px;
+}
+
+.alf-waitlist-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.alf-waitlist-form-centered,
+.alf-waitlist-form-modal {
+  align-items: center;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.alf-waitlist-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.alf-waitlist-form-centered .alf-waitlist-platforms,
+.alf-waitlist-form-modal .alf-waitlist-platforms,
+.alf-waitlist-form-centered .alf-waitlist-meta,
+.alf-waitlist-form-modal .alf-waitlist-meta {
+  justify-content: center;
+}
+
+.alf-waitlist-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 999px;
+}
+
+.alf-waitlist-pill input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.alf-waitlist-pill span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--w-border);
+  background: color-mix(in srgb, var(--w-card) 72%, transparent);
+  color: var(--w-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: background-color 0.16s, border-color 0.16s, color 0.16s, box-shadow 0.16s;
+}
+
+.alf-waitlist-pill:hover span {
+  color: var(--w-fg);
+  border-color: color-mix(in srgb, var(--w-fg) 28%, transparent);
+}
+
+.alf-waitlist-pill:has(input:checked) span,
+.alf-waitlist-pill input:checked + span {
+  background: var(--w-accent-soft);
+  border-color: var(--w-accent-line);
+  color: var(--w-fg);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--w-accent) 25%, transparent);
+}
+
+.alf-waitlist-pill:has(input:focus-visible) span,
+.alf-waitlist-pill input:focus-visible + span {
+  outline: 2px solid var(--w-accent);
+  outline-offset: 2px;
+}
+
+.alf-waitlist-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 999px;
+  border: 1px solid var(--w-border);
+  background: color-mix(in srgb, var(--w-card) 58%, var(--w-bg));
+  box-shadow: 0 14px 32px -18px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.16s, box-shadow 0.16s;
+}
+
+.alf-waitlist-row:focus-within {
+  border-color: var(--w-accent-line);
+  box-shadow: 0 0 0 3px var(--w-accent-soft), 0 14px 32px -18px rgba(0, 0, 0, 0.75);
+}
+
+.alf-waitlist-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--w-fg);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  outline: none;
+}
+
+.alf-waitlist-input::placeholder {
+  color: color-mix(in srgb, var(--w-muted) 78%, transparent);
+}
+
+.alf-waitlist-input:focus-visible {
+  outline: none;
+}
+
+.alf-waitlist-submit {
+  flex: none;
+}
+
+.alf-waitlist-submit[disabled] {
+  opacity: 0.72;
+  cursor: wait;
+  transform: none;
+}
+
+.alf-waitlist-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.alf-waitlist-status {
+  margin: 0;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  text-align: left;
+  border: 1px solid var(--w-border);
+  background: color-mix(in srgb, var(--w-card) 75%, transparent);
+  color: var(--w-fg);
+}
+
+.alf-waitlist-form-centered .alf-waitlist-status,
+.alf-waitlist-form-modal .alf-waitlist-status {
+  text-align: center;
+}
+
+.alf-waitlist-status[data-state="success"] {
+  border-color: rgba(52, 211, 153, 0.42);
+  background: rgba(16, 185, 129, 0.14);
+  color: #d1fae5;
+}
+
+.alf-waitlist-status[data-state="error"] {
+  border-color: rgba(248, 113, 113, 0.45);
+  background: rgba(239, 68, 68, 0.14);
+  color: #fee2e2;
+}
+
+.alf-waitlist-status a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.alf-waitlist-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding-top: 2px;
+}
+
+.alf-store-soon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px 6px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--w-border);
+  background: color-mix(in srgb, var(--w-card) 45%, transparent);
+  color: var(--w-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+  user-select: none;
+  cursor: default;
+}
+
+.alf-store-soon-pill svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  opacity: 0.9;
+}
+
+.alf-store-soon-tag {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--w-accent-soft);
+  border: 1px solid var(--w-accent-line);
+  color: var(--w-fg);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@container (max-width: 600px) {
+  .alf-waitlist-row {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 18px;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .alf-waitlist-input {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .alf-waitlist-submit {
+    width: 100%;
+  }
+}

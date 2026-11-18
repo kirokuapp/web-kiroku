@@ -2,7 +2,9 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.170.0/+esm";
 import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/GLTFLoader.js/+esm";
 import { RGBELoader } from "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/RGBELoader.js/+esm";
 
-const APP_STORE_URL = "https://apps.apple.com/app/id6821614498";
+const WAITLIST_SUPPORT_EMAIL = "support@kirokuapp.com";
+const WAITLIST_ENDPOINT = `https://formsubmit.co/ajax/${WAITLIST_SUPPORT_EMAIL}`;
+const WAITLIST_STORAGE_KEY = "kiroku_waitlist_v1";
 const MODEL_PATH = "/models/iphone-17-pro.glb";
 const HDRI_PATH = "/hdri/studio_small_03_256.hdr";
 const FLAT_FRAME_PATH = "/components/iphone17-3d-flat.webp";
@@ -1440,7 +1442,7 @@ function initHeroSection(isMobileFn) {
     rafHero = 0;
     const mobile = isMobileFn();
     if (navBtnLabel) {
-      navBtnLabel.textContent = mobile ? "Get the app" : "Download";
+      navBtnLabel.textContent = mobile ? "Join Waitlist" : "Join Waitlist";
     }
     const rect = heroSection.getBoundingClientRect();
     const heroBadgesVisible = rect.bottom > 120;
@@ -1568,7 +1570,7 @@ function initMarquee() {
   viewport.addEventListener("pointercancel", endDrag);
 }
 
-// --- Download Modal with QR Code ---
+// --- Waitlist Modal ---
 function initDownloadModal() {
   const openBtn = document.getElementById("alf-download-btn");
   const overlay = document.getElementById("alf-download-modal");
@@ -1576,34 +1578,14 @@ function initDownloadModal() {
 
   const closeBtn = overlay.querySelector(".alf-download-close");
   const dialog = overlay.querySelector(".alf-download-modal");
-  const qrCard = overlay.querySelector(".alf-qr-card");
-  const qrImg = qrCard?.querySelector("img");
+  const emailInput = overlay.querySelector(".alf-waitlist-input");
   let prevOverflow = "";
-  let qrLoaded = false;
-
-  const ensureQRCode = async () => {
-    if (qrLoaded || !qrImg) return;
-    try {
-      const { default: QRCode } = await import("https://cdn.jsdelivr.net/npm/qrcode@1.5.4/+esm");
-      const dataUrl = await QRCode.toDataURL(APP_STORE_URL, {
-        width: 360,
-        margin: 1,
-        errorCorrectionLevel: "M",
-      });
-      qrImg.src = dataUrl;
-      if (qrCard) qrCard.hidden = false;
-      qrLoaded = true;
-    } catch (err) {
-      console.warn("QR code generation skipped", err);
-      if (qrCard) qrCard.hidden = true;
-    }
-  };
 
   const openModal = () => {
     prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     overlay.hidden = false;
-    ensureQRCode();
+    requestAnimationFrame(() => emailInput?.focus());
   };
 
   const closeModal = () => {
@@ -1620,6 +1602,129 @@ function initDownloadModal() {
   dialog?.addEventListener("mousedown", (e) => e.stopPropagation());
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !overlay.hidden) closeModal();
+  });
+}
+
+// --- Zero-Backend Waitlist Forms (Hero, CTA, Modal) ---
+function initWaitlistForms() {
+  const forms = Array.from(document.querySelectorAll(".alf-waitlist-form"));
+  if (forms.length === 0) return;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  const setStatus = (statusEl, state, message, fallbackMailto) => {
+    if (!statusEl) return;
+    statusEl.hidden = false;
+    statusEl.dataset.state = state;
+    statusEl.textContent = message;
+    if (fallbackMailto) {
+      statusEl.appendChild(document.createTextNode(" "));
+      const link = document.createElement("a");
+      link.href = fallbackMailto;
+      link.textContent = WAITLIST_SUPPORT_EMAIL;
+      statusEl.appendChild(link);
+      statusEl.appendChild(document.createTextNode("."));
+    }
+  };
+
+  const saveLocalWaitlist = (entry) => {
+    try {
+      const raw = window.localStorage.getItem(WAITLIST_STORAGE_KEY);
+      const list = raw ? JSON.parse(raw) : [];
+      const next = Array.isArray(list) ? list.filter((item) => item?.email !== entry.email) : [];
+      next.push(entry);
+      window.localStorage.setItem(WAITLIST_STORAGE_KEY, JSON.stringify(next));
+    } catch {
+      // ignore storage errors in private browsing
+    }
+  };
+
+  forms.forEach((form) => {
+    const emailInput = form.querySelector(".alf-waitlist-input");
+    const honeyInput = form.querySelector('input[name="_honey"]');
+    const submitBtn = form.querySelector(".alf-waitlist-submit");
+    const submitLabel = submitBtn?.querySelector("span");
+    const statusEl = form.querySelector(".alf-waitlist-status");
+    const defaultBtnText = submitLabel?.textContent || "Notify Me";
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (form.dataset.submitting === "true") return;
+
+      const email = (emailInput?.value || "").trim().toLowerCase();
+      const platform = form.querySelector('input[name="platform"]:checked')?.value || "ios";
+      const source = form.dataset.waitlistSource || "landing";
+
+      if (honeyInput && honeyInput.value.trim() !== "") {
+        setStatus(statusEl, "success", "You're on the waitlist! We'll notify you when Kiroku launches.");
+        form.reset();
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        setStatus(statusEl, "error", "Please enter a valid email address.");
+        emailInput?.focus();
+        return;
+      }
+
+      form.dataset.submitting = "true";
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitLabel) submitLabel.textContent = "Sending...";
+      if (statusEl) {
+        statusEl.hidden = true;
+        delete statusEl.dataset.state;
+      }
+
+      const submittedAt = new Date().toISOString();
+      const payload = {
+        email,
+        platform,
+        source,
+        submitted_at: submittedAt,
+        _subject: `New Kiroku Waitlist Signup (${platform.toUpperCase()})`,
+        _template: "table",
+        _captcha: "false",
+      };
+
+      try {
+        const res = await fetch(WAITLIST_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(() => null);
+        if (!res.ok || data?.success === false || data?.success === "false") {
+          throw new Error(data?.message || `Request failed with status ${res.status}`);
+        }
+
+        saveLocalWaitlist({ email, platform, source, submitted_at: submittedAt });
+        setStatus(statusEl, "success", "You're on the waitlist! We'll notify you when Kiroku launches.");
+        if (emailInput) emailInput.value = "";
+      } catch {
+        const subject = encodeURIComponent(`Kiroku Waitlist Signup (${platform.toUpperCase()})`);
+        const body = encodeURIComponent(
+          `Hi Kiroku team,\n\nPlease add me to the Kiroku launch waitlist.\n\nEmail: ${email}\nPlatform: ${platform}\nSource: ${source}\nSubmitted: ${submittedAt}\n`
+        );
+        const mailtoUrl = `mailto:${WAITLIST_SUPPORT_EMAIL}?subject=${subject}&body=${body}`;
+        const mailLink = document.createElement("a");
+        mailLink.href = mailtoUrl;
+        mailLink.click();
+
+        setStatus(
+          statusEl,
+          "error",
+          "Could not reach the signup service automatically. Your email app has been prepared, or send directly to",
+          mailtoUrl
+        );
+      } finally {
+        delete form.dataset.submitting;
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitLabel) submitLabel.textContent = defaultBtnText;
+      }
+    });
   });
 }
 
@@ -1660,3 +1765,4 @@ initHeroSection(isMobile);
 initStorySection(isMobile);
 initMarquee();
 initDownloadModal();
+initWaitlistForms();

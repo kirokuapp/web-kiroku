@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kiroku (記録) — Social Anime &amp; Manga Tracker, Taste Match &amp; Reels</title>
   <meta name="description"
-    content="Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Free on iOS and Android with zero ad tracking." />
+    content="Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#100d16" />
   <link rel="canonical" href="https://kirokuapp.com" />
   <meta property="og:title" content="Kiroku (記録) — Social Anime &amp; Manga Tracker, Taste Match &amp; Reels" />
   <meta property="og:description"
-    content="Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Free on iOS and Android with zero ad tracking." />
+    content="Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking." />
   <meta property="og:url" content="https://kirokuapp.com" />
   <meta property="og:site_name" content="Kiroku" />
   <meta property="og:image" content="/og.png" />
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kiroku (記録) — Social Anime &amp; Manga Tracker, Taste Match &amp; Reels" />
   <meta name="twitter:description"
-    content="Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Free on iOS and Android with zero ad tracking." />
+    content="Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking." />
   <meta name="twitter:image" content="/og.png" />
   <link rel="icon" type="image/png" href="/screenshots/kiroku-logo.png" />
   <link rel="apple-touch-icon" href="/screenshots/kiroku-logo.png" />
@@ -32,7 +32,6 @@
     rel="stylesheet" />
   <link rel="preload" href="/models/iphone-17-pro.glb" as="fetch" crossorigin="anonymous" />
   <link rel="preload" href="/hdri/studio_small_03_256.hdr" as="fetch" crossorigin="anonymous" />
-  <link rel="preload" href="/promovideo/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" as="image" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 
@@ -48,11 +47,11 @@
               <div class="alf-nav-actions">
                 <button type="button" class="alf-btn alf-btn-primary" id="alf-download-btn" aria-hidden="false"
                   tabindex="0">
-                  <span>Download</span>
+                  <span>Join Waitlist</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                     viewBox="0 0 256 256" aria-hidden="true">
                     <path
-                      d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z">
+                      d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z">
                     </path>
                   </svg>
           </button>
@@ -73,14 +72,56 @@
                           Organize anime and manga, track your progress, discover stories, and share favorites with
                           fellow fans.
                         </p>
-                        <div class="alf-enter" style="--alf-delay: 240ms">
-                          <div class="alf-badges">
-                            <a class="alf-badge" href="https://apps.apple.com/app/id6821614498" target="_blank"
-                              rel="noopener noreferrer">
-                              <img src="/promovideo/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-                                alt="Download on the App Store" draggable="false" />
-                            </a>
-                          </div>
+                        <div class="alf-enter alf-waitlist-wrap" style="--alf-delay: 240ms">
+                          <form class="alf-waitlist-form" data-waitlist-source="hero"
+                            action="https://formsubmit.co/support@kirokuapp.com" method="POST" novalidate>
+                            <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform">
+                              <label class="alf-waitlist-pill">
+                                <input type="radio" name="platform" value="ios" checked />
+                                <span>iOS</span>
+                              </label>
+                              <label class="alf-waitlist-pill">
+                                <input type="radio" name="platform" value="android" />
+                                <span>Android</span>
+                              </label>
+                              <label class="alf-waitlist-pill">
+                                <input type="radio" name="platform" value="both" />
+                                <span>Both</span>
+                              </label>
+                            </div>
+                            <div class="alf-waitlist-row">
+                              <input class="alf-waitlist-input" type="email" name="email" autocomplete="email"
+                                placeholder="you@example.com" aria-label="Email address" required />
+                              <input class="alf-waitlist-hp" type="text" name="_honey" tabindex="-1"
+                                autocomplete="off" aria-hidden="true" />
+                              <button type="submit" class="alf-btn alf-btn-primary alf-waitlist-submit">
+                                <span>Notify Me</span>
+                              </button>
+                            </div>
+                            <p class="alf-waitlist-status" role="status" aria-live="polite" hidden></p>
+                            <div class="alf-waitlist-meta" aria-label="Platform availability">
+                              <span class="alf-store-soon-pill" aria-disabled="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                  viewBox="0 0 24 24" aria-hidden="true">
+                                  <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.78-.96 2.84 1.04.08 2.08-.52 2.72-1.3z">
+                                  </path>
+                                </svg>
+                                <span>App Store</span>
+                                <span class="alf-store-soon-tag">Coming Soon</span>
+                              </span>
+                              <span class="alf-store-soon-pill" aria-disabled="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                  viewBox="0 0 24 24" aria-hidden="true">
+                                  <path
+                                    d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .61-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.493-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z">
+                                  </path>
+                                </svg>
+                                <span>Google Play</span>
+                                <span class="alf-store-soon-tag">Coming Soon</span>
+                              </span>
+                            </div>
+                          </form>
                         </div>
                       </div>
 
@@ -287,15 +328,57 @@
                               <section id="cta" class="alf-cta" data-section="cta" style="order: 3">
                                 <div class="alf-container">
                                   <div class="alf-reveal alf-cta-panel" style="--alf-delay: 0ms">
-                                    <h2 class="alf-display alf-h2">Build your story collection</h2>
-                                    <p class="alf-lede">Bring your anime and manga world together with Kiroku.</p>
-                                    <div class="alf-badges">
-                                      <a class="alf-badge" href="https://apps.apple.com/app/id6821614498"
-                                        target="_blank" rel="noopener noreferrer">
-                                        <img src="/promovideo/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-                                          alt="Download on the App Store" draggable="false" />
-                                      </a>
-                                    </div>
+                                    <h2 class="alf-display alf-h2">Be first when Kiroku launches</h2>
+                                    <p class="alf-lede">Join the waitlist for early access on iOS and Android. One email at launch, zero spam.</p>
+                                    <form class="alf-waitlist-form alf-waitlist-form-centered" data-waitlist-source="cta"
+                                      action="https://formsubmit.co/support@kirokuapp.com" method="POST" novalidate>
+                                      <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform">
+                                        <label class="alf-waitlist-pill">
+                                          <input type="radio" name="platform" value="ios" checked />
+                                          <span>iOS</span>
+                                        </label>
+                                        <label class="alf-waitlist-pill">
+                                          <input type="radio" name="platform" value="android" />
+                                          <span>Android</span>
+                                        </label>
+                                        <label class="alf-waitlist-pill">
+                                          <input type="radio" name="platform" value="both" />
+                                          <span>Both</span>
+                                        </label>
+                                      </div>
+                                      <div class="alf-waitlist-row">
+                                        <input class="alf-waitlist-input" type="email" name="email" autocomplete="email"
+                                          placeholder="you@example.com" aria-label="Email address" required />
+                                        <input class="alf-waitlist-hp" type="text" name="_honey" tabindex="-1"
+                                          autocomplete="off" aria-hidden="true" />
+                                        <button type="submit" class="alf-btn alf-btn-primary alf-waitlist-submit">
+                                          <span>Join Waitlist</span>
+                                        </button>
+                                      </div>
+                                      <p class="alf-waitlist-status" role="status" aria-live="polite" hidden></p>
+                                      <div class="alf-waitlist-meta" aria-label="Platform availability">
+                                        <span class="alf-store-soon-pill" aria-disabled="true">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.78-.96 2.84 1.04.08 2.08-.52 2.72-1.3z">
+                                            </path>
+                                          </svg>
+                                          <span>App Store</span>
+                                          <span class="alf-store-soon-tag">Coming Soon</span>
+                                        </span>
+                                        <span class="alf-store-soon-pill" aria-disabled="true">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                              d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .61-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.493-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z">
+                                            </path>
+                                          </svg>
+                                          <span>Google Play</span>
+                                          <span class="alf-store-soon-tag">Coming Soon</span>
+                                        </span>
+                                      </div>
+                                    </form>
                                   </div>
                                 </div>
                               </section>
@@ -357,10 +440,10 @@
                   </div>
   </footer>
 
-            <!-- Download QR Modal -->
+            <!-- Waitlist Modal -->
             <div id="alf-download-modal" class="alf-download-overlay" role="presentation" hidden>
-              <section class="alf-download-modal" role="dialog" aria-modal="true" aria-label="Download Kiroku">
-                <button type="button" class="alf-download-close" aria-label="Close download options">
+              <section class="alf-download-modal" role="dialog" aria-modal="true" aria-label="Join the Kiroku waitlist">
+                <button type="button" class="alf-download-close" aria-label="Close waitlist dialog">
                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                     viewBox="0 0 256 256" aria-hidden="true">
                     <path
@@ -372,22 +455,61 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                     viewBox="0 0 256 256">
                     <path
-                      d="M228,144v64a12,12,0,0,1-12,12H40a12,12,0,0,1-12-12V144a12,12,0,0,1,24,0v52H204V144a12,12,0,0,1,24,0Zm-108.49,8.49a12,12,0,0,0,17,0l40-40a12,12,0,0,0-17-17L140,115V32a12,12,0,0,0-24,0v83L96.49,95.51a12,12,0,0,0-17,17Z">
+                      d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z">
                     </path>
                   </svg>
                 </span>
-                <h2 class="alf-display">Get Kiroku</h2>
-                <p>Scan with your phone to open the correct store.</p>
-                <div class="alf-qr-card" hidden>
-                  <img alt="QR code to download Kiroku" />
-                </div>
-                <div class="alf-badges">
-                  <a class="alf-badge" href="https://apps.apple.com/app/id6821614498" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="/promovideo/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-                      alt="Download on the App Store" draggable="false" />
-                  </a>
-                </div>
+                <h2 class="alf-display">Get notified at launch</h2>
+                <p>Kiroku is coming soon to iOS and Android. Leave your email and we&rsquo;ll ping you the moment it drops.</p>
+                <form class="alf-waitlist-form alf-waitlist-form-modal" data-waitlist-source="modal"
+                  action="https://formsubmit.co/support@kirokuapp.com" method="POST" novalidate>
+                  <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform">
+                    <label class="alf-waitlist-pill">
+                      <input type="radio" name="platform" value="ios" checked />
+                      <span>iOS</span>
+                    </label>
+                    <label class="alf-waitlist-pill">
+                      <input type="radio" name="platform" value="android" />
+                      <span>Android</span>
+                    </label>
+                    <label class="alf-waitlist-pill">
+                      <input type="radio" name="platform" value="both" />
+                      <span>Both</span>
+                    </label>
+                  </div>
+                  <div class="alf-waitlist-row">
+                    <input class="alf-waitlist-input" type="email" name="email" autocomplete="email"
+                      placeholder="you@example.com" aria-label="Email address" required />
+                    <input class="alf-waitlist-hp" type="text" name="_honey" tabindex="-1"
+                      autocomplete="off" aria-hidden="true" />
+                    <button type="submit" class="alf-btn alf-btn-primary alf-waitlist-submit">
+                      <span>Notify Me</span>
+                    </button>
+                  </div>
+                  <p class="alf-waitlist-status" role="status" aria-live="polite" hidden></p>
+                  <div class="alf-waitlist-meta" aria-label="Platform availability">
+                    <span class="alf-store-soon-pill" aria-disabled="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                        viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                          d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.78-.96 2.84 1.04.08 2.08-.52 2.72-1.3z">
+                        </path>
+                      </svg>
+                      <span>App Store</span>
+                      <span class="alf-store-soon-tag">Coming Soon</span>
+                    </span>
+                    <span class="alf-store-soon-pill" aria-disabled="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                        viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                          d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .61-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.493-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z">
+                        </path>
+                      </svg>
+                      <span>Google Play</span>
+                      <span class="alf-store-soon-tag">Coming Soon</span>
+                    </span>
+                  </div>
+                </form>
   </section>
   </div>
   </div>
