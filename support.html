@@ -1,163 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help & Support — Kiroku (記録)</title>
-  <meta name="description" content="Kiroku Help Center & Customer Support. Frequently asked questions, MyAnimeList sync assistance, reporting guides, and support contact information.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              bg: '#0f0b15',
-              surface: '#181221',
-              card: '#201a2b',
-              border: 'rgba(255, 255, 255, 0.08)',
-              primary: '#8b5cf6',
-              accent: '#ec4899',
-              cyan: '#06b6d4',
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            jp: ['"Noto Sans JP"', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help &amp; Support — Kiroku (記録)</title>
+  <meta name="description"
+    content="Kiroku Support & Help Center. MyAnimeList sync guides, Taste Match™, abuse reporting, sensitive content filter, and account deletion." />
+  <meta name="theme-color" content="#100d16" />
+  <link rel="icon" type="image/png" href="/screenshots/kiroku-logo.png" />
+  <link rel="apple-touch-icon" href="/screenshots/kiroku-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
-<body class="bg-brand-bg text-slate-200 font-sans antialiased selection:bg-brand-primary selection:text-white min-h-screen flex flex-col">
 
-  <!-- Navigation -->
-  <header class="border-b border-brand-border sticky top-0 z-50 backdrop-blur-xl bg-brand-bg/80">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3 group">
-        <span class="text-2xl">🎌</span>
-        <span class="text-xl font-bold tracking-tight text-white group-hover:text-brand-primary transition">Kiroku <span class="font-jp text-sm text-brand-primary font-normal">記録</span></span>
-      </a>
-      <nav class="flex items-center gap-6 text-sm text-slate-400">
-        <a href="/" class="hover:text-white transition">Home</a>
-        <a href="/privacy" class="hover:text-white transition">Privacy</a>
-        <a href="/terms" class="hover:text-white transition">Terms</a>
-        <a href="/support" class="text-brand-primary font-medium">Support</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <main class="flex-1 max-w-4xl mx-auto px-6 py-12">
-    <div class="text-center max-w-2xl mx-auto mb-14">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-primary border border-brand-primary/20 mb-4">
-        Official Support & Help Center
-      </div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">How can we help you?</h1>
-      <p class="text-slate-400 mt-3 text-base">
-        Have questions about your Kiroku account, Taste Match™, or need help with a report? We're here for you.
-      </p>
-
-      <div class="mt-6 flex justify-center">
-        <a href="mailto:support@kirokuapp.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-primary text-white font-semibold shadow-lg shadow-brand-primary/25 hover:bg-brand-primary/90 transition text-sm">
-          <span>✉️</span> Email Support: support@kirokuapp.com
-        </a>
-      </div>
-    </div>
-
-    <!-- Quick Help Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
-        <div class="w-10 h-10 rounded-xl bg-brand-primary/20 text-brand-primary flex items-center justify-center text-xl mb-4">
-          ⚡
+  <body>
+    <div class="alf-site" lang="en" dir="ltr" data-theme="v1">
+      <header class="alf-nav">
+        <div class="alf-container alf-nav-inner">
+          <a href="/" class="alf-brand" aria-label="Kiroku home">
+            <img class="alf-logo" src="/screenshots/kiroku-logo.png" alt="Kiroku" />
+            <span>Kiroku</span>
+          </a>
+          <div class="alf-nav-actions">
+            <a class="alf-btn alf-btn-ghost" href="/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"
+                aria-hidden="true">
+                <path
+                  d="M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z">
+                </path>
+              </svg>
+              <span>Back to Kiroku</span>
+            </a>
+          </div>
         </div>
-        <h3 class="text-lg font-bold text-white mb-2">MyAnimeList Sync Assistance</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          To connect your account, head to <strong>Settings &rarr; Connect MyAnimeList</strong>. After authenticating securely via MAL OAuth in your browser, your anime and manga watchlists will automatically synchronize in the background.
-        </p>
-      </div>
+      </header>
 
-      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
-        <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center text-xl mb-4">
-          🎯
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">How Taste Match™ Works</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Taste Match compares your scores, completed titles, and genre affinities with other users using Pearson correlation and cosine similarity. Tap the Taste Match card on any user's profile to explore your synergy!
-        </p>
-      </div>
+      <main class="alf-doc">
+        <div class="alf-container alf-doc-inner">
+          <h1 class="alf-display">Support</h1>
+          <p class="alf-doc-meta">Kiroku &middot; Last updated November 15, 2026</p>
 
-      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
-        <div class="w-10 h-10 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xl mb-4">
-          🛡️
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">Reporting Objectionable Content</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Kiroku enforces zero tolerance for harassment. Tap the three dots (···) on any comment or profile to report it. Items with 3 reports are quarantined immediately, and reviewed by a moderator within 24 hours.
-        </p>
-      </div>
+              <div class="alf-prose">
+                <h2>Support &amp; Help Center</h2>
+                <p>
+                  Need help with <strong>Kiroku (記録)</strong>? Whether you have a question about your account,
+                  MyAnimeList sync, Taste Match™,
+                  or want to report abuse or request account deletion, we're here to help.
+                </p>
 
-      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
-        <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center text-xl mb-4">
-          🗑️
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">Deleting Your Account & Data</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          You can permanently delete your account at any time directly in the app via <strong>Settings &rarr; Account &rarr; Delete account</strong>. This permanently revokes all third-party tokens and removes your personal data immediately.
-        </p>
-      </div>
+              <h2>Contact Support</h2>
+              <ul>
+                <li><strong>Support Email:</strong> <a href="mailto:support@kirokuapp.com" target="_blank"
+                    rel="noopener noreferrer">support@kirokuapp.com</a></li>
+                <li><strong>Official Website:</strong> <a href="https://kirokuapp.com" target="_blank"
+                    rel="noopener noreferrer">https://kirokuapp.com</a></li>
+                <li><strong>Instagram:</strong> <a href="https://www.instagram.com/kiroku_app/" target="_blank"
+                    rel="noopener noreferrer">@kiroku_app</a></li>
+              </ul>
+              <p>
+                We aim to respond to all support inquiries within <strong>24–48 hours</strong>, and all
+                safety/moderation reports are reviewed within <strong>24 hours</strong>.
+              </p>
+
+                <h2>Common Topics &amp; Guides</h2>
+
+                <h3>1. Connecting &amp; Syncing MyAnimeList (MAL)</h3>
+                <ul>
+                  <li>Open <strong>Settings &rarr; MyAnimeList</strong> and tap <strong>Connect MyAnimeList</strong>.
+                  </li>
+                  <li>Sign in securely via MyAnimeList's PKCE OAuth 2.0 flow in your browser.</li>
+                  <li>Once redirected back to Kiroku, you can tap <strong>Re-sync lists</strong> or
+                    <strong>Disconnect</strong> anytime from the same Settings section.</li>
+                </ul>
+
+                <h3>2. How Taste Match™ Works</h3>
+                <ul>
+                  <li><strong>Taste Match™</strong> calculates compatibility between fans using your favorite genres,
+                    anime/manga ratings, completed titles, and favorite characters.</li>
+                  <li>Open any user's profile and tap the <strong>Taste Match</strong> card to view your synergy
+                    breakdown and shareable match card.</li>
+                </ul>
+
+              <h3>3. Reporting Abuse &amp; Blocking Users</h3>
+              <ul>
+                <li><strong>Report Content or Users:</strong> Tap the report option on any comment, rating/review, list,
+                  or profile to flag spam, harassment, inappropriate content, or misinformation. Content with <strong>3
+                    or more reports</strong> is quarantined immediately and reviewed within 24 hours.</li>
+                <li><strong>Block Users:</strong> Block someone directly from their profile, or review your blocked list
+                  anytime in <strong>Settings &rarr; Privacy &amp; Safety &rarr; Blocked accounts</strong>.</li>
+              </ul>
+
+                <h3>4. Sensitive Content Blur Filter</h3>
+                <ul>
+                  <li>Kiroku enables sensitive cover blurring by default. You can adjust this in <strong>Settings &rarr;
+                      Sensitive Content (+18) &rarr; Blur Sensitive Content Images</strong>.</li>
+                </ul>
+
+                <h3>5. Push Notifications &amp; Password Resets</h3>
+                <ul>
+                  <li>Manage notification alerts (<strong>List likes</strong>, <strong>New followers</strong>,
+                    <strong>System</strong>) in <strong>Settings &rarr; Notifications</strong>.</li>
+                  <li>If you registered with email and forgot your password, use <strong>Forgot Password</strong> on the
+                    login screen to receive a reset link via email (valid for 1 hour).</li>
+                  <li>If you signed in with <strong>Google</strong> or <strong>Apple</strong>, manage your password
+                    through your Google or Apple account.</li>
+                </ul>
+
+                <h3>6. Deleting Your Account &amp; Data</h3>
+                <ul>
+                  <li><strong>Inside the App:</strong> Go to <strong>Settings &rarr; Account &rarr; Delete
+                      account</strong> to permanently delete your account, clear your personal data, and revoke linked
+                    tokens immediately.</li>
+                  <li><strong>Already Uninstalled?</strong> Send an email to <a href="mailto:support@kirokuapp.com"
+                      target="_blank" rel="noopener noreferrer">support@kirokuapp.com</a> from your registered email
+                    address with the subject <strong>Kiroku Account Deletion Request</strong> and we will process it
+                    promptly.</li>
+                </ul>
+              </div>
+
+                <p style="margin-top: 32px">
+                  <a class="alf-btn alf-btn-primary" href="mailto:support@kirokuapp.com">Email support@kirokuapp.com</a>
+                </p>
+              </div>
+          </main>
+
+            <footer class="alf-footer">
+              <div class="alf-container alf-footer-inner">
+                <div>&copy; 2026 Kiroku</div>
+                <ul class="alf-footer-links">
+                  <li><a href="/privacy">Privacy</a></li>
+                  <li><a href="/terms">Terms</a></li>
+                  <li><a href="/support">Support</a></li>
+                </ul>
+              </div>
+      </footer>
     </div>
+  </body>
 
-    <!-- FAQ Accordion Style -->
-    <div class="space-y-4">
-      <h2 class="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-
-      <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
-        <h4 class="font-semibold text-white">How do I change my theme or avatar?</h4>
-        <p class="text-sm text-slate-400 mt-2">
-          Open the <strong>Settings</strong> screen from your profile. You can switch between Light, Dark, or System mode, and tap on your avatar to choose from 12 iconic anime avatars.
-        </p>
-      </div>
-
-      <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
-        <h4 class="font-semibold text-white">Why are some anime covers blurred?</h4>
-        <p class="text-sm text-slate-400 mt-2">
-          Kiroku has a built-in sensitive content filter enabled by default. To unblur mild suggestive covers, visit <strong>Settings &rarr; Content & Moderation</strong> and toggle off the "Blur Sensitive Covers" option.
-        </p>
-      </div>
-
-      <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
-        <h4 class="font-semibold text-white">How do I export or share my Taste Match Story Card?</h4>
-        <p class="text-sm text-slate-400 mt-2">
-          Visit any friend's profile with whom you have scored compatibility. Tap the <strong>"Share Match Card"</strong> button to generate an Instagram/WhatsApp story card with your soulmate score!
-        </p>
-      </div>
-
-      <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
-        <h4 class="font-semibold text-white">Still need assistance?</h4>
-        <p class="text-sm text-slate-400 mt-2">
-          Send us an email at <a href="mailto:support@kirokuapp.com" class="text-brand-primary underline">support@kirokuapp.com</a>. We reply to all inquiries within 24 to 48 hours.
-        </p>
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="border-t border-brand-border py-8 text-center text-xs text-slate-500 mt-12">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>&copy; 2026 Kiroku (記録). All rights reserved.</p>
-      <div class="flex gap-6">
-        <a href="/privacy" class="hover:text-slate-300 transition">Privacy Policy</a>
-        <a href="/terms" class="hover:text-slate-300 transition">Terms of Service</a>
-        <a href="/support" class="text-brand-primary font-medium">Support</a>
-      </div>
-    </div>
-  </footer>
-
-</body>
 </html>
-
