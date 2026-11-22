@@ -1,3 +1,5 @@
+import { pageContent } from "./page-content.js";
+
 /**
  * Kiroku Internationalization (i18n) Engine
  * Supported Languages: English (en, default), Türkçe (tr), 日本語 (ja)
@@ -81,6 +83,7 @@ export const translations = {
     },
     supportPage: {
       title: "Help & Support — Kiroku (記録)",
+      description: "Kiroku Support & Help Center. MyAnimeList sync guides, Taste Match™, abuse reporting, sensitive content filter, and account deletion.",
       h1: "Support",
       meta: "Kiroku · Last updated November 15, 2026",
       centerTitle: "Support & Help Center",
@@ -93,10 +96,16 @@ export const translations = {
       topicsTitle: "Common Topics & Guides"
     },
     privacyPage: {
-      title: "Privacy Policy — Kiroku (記録)"
+      title: "Privacy Policy — Kiroku (記録)",
+      h1: "Privacy",
+      meta: "Kiroku · Last updated November 15, 2026",
+      description: "Kiroku Privacy Policy. Details on what information we collect, how we use it, zero third-party ad tracking, and self-serve account deletion."
     },
     termsPage: {
-      title: "Terms of Service & EULA — Kiroku (記録)"
+      title: "Terms of Service & EULA — Kiroku (記録)",
+      h1: "Terms",
+      meta: "Kiroku · Last updated November 15, 2026",
+      description: "Kiroku End User License Agreement (EULA) and Terms of Service. Zero tolerance policy, UGC guidelines, and safety controls."
     }
   },
   tr: {
@@ -166,6 +175,7 @@ export const translations = {
     },
     supportPage: {
       title: "Yardım ve Destek — Kiroku (記録)",
+      description: "Kiroku destek ve yardım merkezi. MyAnimeList eşitleme rehberleri, Taste Match™, kötüye kullanım bildirimi, hassas içerik filtresi ve hesap silme bilgileri.",
       h1: "Destek",
       meta: "Kiroku · Son güncelleme: 15 Kasım 2026",
       centerTitle: "Destek ve Yardım Merkezi",
@@ -178,10 +188,16 @@ export const translations = {
       topicsTitle: "Sık Sorulan Konular ve Rehberler"
     },
     privacyPage: {
-      title: "Gizlilik Politikası — Kiroku (記録)"
+      title: "Gizlilik Politikası — Kiroku (記録)",
+      h1: "Gizlilik",
+      meta: "Kiroku · Son güncelleme: 15 Kasım 2026",
+      description: "Kiroku Gizlilik Politikası. Toplanan bilgiler, kullanım amaçları, üçüncü taraf reklam takibinin olmaması ve hesabı kendiniz silebilmeniz hakkında bilgi."
     },
     termsPage: {
-      title: "Kullanım Koşulları ve EULA — Kiroku (記録)"
+      title: "Kullanım Koşulları ve EULA — Kiroku (記録)",
+      h1: "Kullanım Koşulları",
+      meta: "Kiroku · Son güncelleme: 15 Kasım 2026",
+      description: "Kiroku Hizmet Koşulları ve Son Kullanıcı Lisans Sözleşmesi (EULA). Sıfır tolerans politikası, kullanıcı içerikleri kuralları ve güvenlik denetimleri."
     }
   },
   ja: {
@@ -251,6 +267,7 @@ export const translations = {
     },
     supportPage: {
       title: "ヘルプ＆サポート — Kiroku (記録)",
+      description: "Kirokuサポート＆ヘルプセンター。MyAnimeList同期ガイド、Taste Match™、通報、センシティブコンテンツフィルター、アカウント削除について。",
       h1: "サポート",
       meta: "Kiroku · 最終更新日: 2026年11月15日",
       centerTitle: "サポート＆ヘルプセンター",
@@ -263,10 +280,16 @@ export const translations = {
       topicsTitle: "よくあるトピックとガイド"
     },
     privacyPage: {
-      title: "プライバシーポリシー — Kiroku (記録)"
+      title: "プライバシーポリシー — Kiroku (記録)",
+      h1: "プライバシー",
+      meta: "Kiroku · 最終更新日: 2026年11月15日",
+      description: "Kirokuのプライバシーポリシー。収集する情報、その利用方法、第三者広告トラッキングを行わないこと、アカウントのセルフ削除について説明します。"
     },
     termsPage: {
-      title: "利用規約＆EULA — Kiroku (記録)"
+      title: "利用規約＆EULA — Kiroku (記録)",
+      h1: "利用規約",
+      meta: "Kiroku · 最終更新日: 2026年11月15日",
+      description: "Kiroku利用規約およびエンドユーザー使用許諾契約（EULA）。ゼロトレランス方針、ユーザー投稿のルール、安全対策について説明します。"
     }
   }
 };
@@ -386,6 +409,11 @@ export function applyTranslations() {
   const isPrivacy = pathname.includes("privacy");
   const isTerms = pathname.includes("terms");
   const isLanding = !isSupport && !isPrivacy && !isTerms;
+  const pageKey = isSupport ? "support" : isPrivacy ? "privacy" : isTerms ? "terms" : null;
+  const contentRoot = document.querySelector("[data-page-content]");
+  if (contentRoot && !contentRoot.dataset.defaultHtml) {
+    contentRoot.dataset.defaultHtml = contentRoot.innerHTML;
+  }
 
   if (isSupport && translations[currentLang]?.supportPage?.title) {
     document.title = t("supportPage.title");
@@ -395,6 +423,15 @@ export function applyTranslations() {
     document.title = t("termsPage.title");
   } else if (isLanding) {
     document.title = t("meta.title");
+  }
+
+  if (pageKey) {
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", t(`${pageKey}Page.description`));
+    const h1 = document.querySelector("main .alf-doc-inner > h1");
+    if (h1) h1.textContent = t(`${pageKey}Page.h1`);
+    const pageMeta = document.querySelector("main .alf-doc-meta");
+    if (pageMeta) pageMeta.textContent = t(`${pageKey}Page.meta`);
   }
 
   // Meta description & Open Graph (scoped to landing page to protect specialized subpage meta)
@@ -447,6 +484,17 @@ export function applyTranslations() {
     if (key) el.setAttribute("title", t(key));
   });
 
+  // Legal and support documents are translated as complete HTML fragments so lists,
+  // emphasis, links, and every section stay in sync across languages.
+  const localizedContent = pageKey && pageContent[currentLang]?.[pageKey];
+  if (contentRoot) {
+    // Restore the source markup when switching back to English.
+    contentRoot.innerHTML = localizedContent || contentRoot.dataset.defaultHtml;
+  }
+  document.querySelectorAll("[data-page-cta]").forEach((el) => {
+    el.hidden = Boolean(localizedContent);
+  });
+
   // Update feature story rail steps titles dynamically if present
   const railDots = document.querySelectorAll(".alf-story-rail li");
   if (railDots.length >= 5) {
@@ -489,6 +537,8 @@ export function setLanguage(lang) {
  */
 function updateSelectorUI() {
   document.querySelectorAll(".alf-lang-picker").forEach((picker) => {
+    const listbox = picker.querySelector('[role="listbox"]');
+    if (listbox) listbox.setAttribute("aria-label", t("nav.selectLanguage"));
     const currentBadge = picker.querySelector(".alf-lang-current") || document.getElementById("alf-lang-current");
     if (currentBadge) {
       currentBadge.textContent = currentLang.toUpperCase();
