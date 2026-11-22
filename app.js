@@ -1,6 +1,7 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.170.0/+esm";
 import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/GLTFLoader.js/+esm";
 import { RGBELoader } from "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/RGBELoader.js/+esm";
+import { initI18n, t, getLanguage, setLanguage } from "./i18n.js";
 
 const WAITLIST_SUPPORT_EMAIL = "support@kirokuapp.com";
 const WAITLIST_ENDPOINT = `https://formsubmit.co/ajax/${WAITLIST_SUPPORT_EMAIL}`;
@@ -1442,7 +1443,7 @@ function initHeroSection(isMobileFn) {
     rafHero = 0;
     const mobile = isMobileFn();
     if (navBtnLabel) {
-      navBtnLabel.textContent = mobile ? "Join Waitlist" : "Join Waitlist";
+      navBtnLabel.textContent = t("nav.joinWaitlist");
     }
     const rect = heroSection.getBoundingClientRect();
     const heroBadgesVisible = rect.bottom > 120;
@@ -1645,7 +1646,17 @@ function initWaitlistForms() {
     const submitBtn = form.querySelector(".alf-waitlist-submit");
     const submitLabel = submitBtn?.querySelector("span");
     const statusEl = form.querySelector(".alf-waitlist-status");
-    const defaultBtnText = submitLabel?.textContent || "Notify Me";
+
+    const getSubmitLabelText = () => {
+      const isHeroOrModal = form.dataset.waitlistSource === "hero" || form.dataset.waitlistSource === "modal";
+      return isHeroOrModal ? t("waitlist.notifyMe") : t("waitlist.joinWaitlist");
+    };
+
+    window.addEventListener("kiroku:langchange", () => {
+      if (submitLabel && form.dataset.submitting !== "true") {
+        submitLabel.textContent = getSubmitLabelText();
+      }
+    });
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -1656,20 +1667,20 @@ function initWaitlistForms() {
       const source = form.dataset.waitlistSource || "landing";
 
       if (honeyInput && honeyInput.value.trim() !== "") {
-        setStatus(statusEl, "success", "You're on the waitlist! We'll notify you when Kiroku launches.");
+        setStatus(statusEl, "success", t("waitlist.statusSuccess"));
         form.reset();
         return;
       }
 
       if (!emailRegex.test(email)) {
-        setStatus(statusEl, "error", "Please enter a valid email address.");
+        setStatus(statusEl, "error", t("waitlist.statusInvalidEmail"));
         emailInput?.focus();
         return;
       }
 
       form.dataset.submitting = "true";
       if (submitBtn) submitBtn.disabled = true;
-      if (submitLabel) submitLabel.textContent = "Sending...";
+      if (submitLabel) submitLabel.textContent = t("waitlist.statusSending");
       if (statusEl) {
         statusEl.hidden = true;
         delete statusEl.dataset.state;
@@ -1681,7 +1692,7 @@ function initWaitlistForms() {
         platform,
         source,
         submitted_at: submittedAt,
-        _subject: `New Kiroku Waitlist Signup (${platform.toUpperCase()})`,
+        _subject: t("waitlist.mailSubject", { platform: platform.toUpperCase() }),
         _template: "table",
         _captcha: "false",
       };
@@ -1701,7 +1712,7 @@ function initWaitlistForms() {
         }
 
         saveLocalWaitlist({ email, platform, source, submitted_at: submittedAt });
-        setStatus(statusEl, "success", "You're on the waitlist! We'll notify you when Kiroku launches.");
+        setStatus(statusEl, "success", t("waitlist.statusSuccess"));
         if (emailInput) emailInput.value = "";
       } catch {
         const subject = encodeURIComponent(`Kiroku Waitlist Signup (${platform.toUpperCase()})`);
@@ -1716,13 +1727,13 @@ function initWaitlistForms() {
         setStatus(
           statusEl,
           "error",
-          "Could not reach the signup service automatically. Your email app has been prepared, or send directly to",
+          t("waitlist.statusNetworkError"),
           mailtoUrl
         );
       } finally {
         delete form.dataset.submitting;
         if (submitBtn) submitBtn.disabled = false;
-        if (submitLabel) submitLabel.textContent = defaultBtnText;
+        if (submitLabel) submitLabel.textContent = getSubmitLabelText();
       }
     });
   });
@@ -1760,6 +1771,7 @@ function initScrollReveal() {
 const mobileMediaQuery = window.matchMedia("(max-width: 760px)");
 const isMobile = () => mobileMediaQuery.matches;
 
+initI18n();
 initScrollReveal();
 initHeroSection(isMobile);
 initStorySection(isMobile);

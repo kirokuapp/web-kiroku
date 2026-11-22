@@ -40,14 +40,39 @@
             <div class="alf-site" data-viewport="desktop" data-mode="public" lang="en" dir="ltr" data-theme="v1">
               <header class="alf-nav">
                 <div class="alf-container alf-nav-inner">
-                  <a href="/" class="alf-brand" aria-label="Kiroku home">
+                  <a href="/" class="alf-brand" aria-label="Kiroku home" data-i18n-aria-label="nav.brandAria">
                     <img class="alf-logo" src="/screenshots/kiroku-logo.png" alt="Kiroku" />
                     <span>Kiroku</span>
                   </a>
               <div class="alf-nav-actions">
+                <div class="alf-lang-picker" id="alf-lang-picker">
+                  <button type="button" class="alf-lang-btn" id="alf-lang-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language" data-i18n-aria-label="nav.selectLanguage">
+                    <svg class="alf-lang-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                      <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,0,1-85.34-64H71.4a124.08,124.08,0,0,1,16.71,51.81A88.35,88.35,0,0,1,128,216Zm-24-80a139.11,139.11,0,0,1,4.2-32h39.6a139.11,139.11,0,0,1,4.2,32,139.11,139.11,0,0,1-4.2,32H108.2A139.11,139.11,0,0,1,104,136Zm24-88a88.35,88.35,0,0,1,39.89,12.19A124.08,124.08,0,0,1,184.6,92H152.6A154.58,154.58,0,0,0,128,48ZM88.11,60.19A88.35,88.35,0,0,1,128,48a154.58,154.58,0,0,0-24.6,44H71.4A124.08,124.08,0,0,1,88.11,60.19ZM40.66,120H70.1a155.8,155.8,0,0,0,0,32H40.66a88.46,88.46,0,0,1,0-32Zm47.45,83.81A124.08,124.08,0,0,1,71.4,168H103.4A154.58,154.58,0,0,0,128,208,88.35,88.35,0,0,1,88.11,203.81Zm39.89,4.19a154.58,154.58,0,0,0,24.6-44h32.04a124.08,124.08,0,0,1-16.71,51.81A88.35,88.35,0,0,1,128,208Zm57.9-56H157.9a155.8,155.8,0,0,0,0-32h29.44a88.46,88.46,0,0,1,0,32Zm0-48H157.9a139.11,139.11,0,0,0-4.2-32h30.9A124.08,124.08,0,0,1,185.9,104Z"/>
+                    </svg>
+                    <span class="alf-lang-current" id="alf-lang-current">EN</span>
+                    <svg class="alf-lang-chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+                    </svg>
+                  </button>
+                  <div class="alf-lang-dropdown" id="alf-lang-dropdown" role="listbox" aria-label="Select language" hidden>
+                    <button type="button" role="option" class="alf-lang-option is-active" data-lang="en" aria-selected="true">
+                      <span class="alf-lang-native">English</span>
+                      <span class="alf-lang-code">EN</span>
+                    </button>
+                    <button type="button" role="option" class="alf-lang-option" data-lang="tr" aria-selected="false">
+                      <span class="alf-lang-native">Türkçe</span>
+                      <span class="alf-lang-code">TR</span>
+                    </button>
+                    <button type="button" role="option" class="alf-lang-option" data-lang="ja" aria-selected="false">
+                      <span class="alf-lang-native">日本語</span>
+                      <span class="alf-lang-code">JA</span>
+                    </button>
+                  </div>
+                </div>
                 <button type="button" class="alf-btn alf-btn-primary" id="alf-download-btn" aria-hidden="false"
                   tabindex="0">
-                  <span>Join Waitlist</span>
+                  <span data-i18n="nav.joinWaitlist">Join Waitlist</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                     viewBox="0 0 256 256" aria-hidden="true">
                     <path
@@ -65,17 +90,17 @@
                     <div class="alf-hero-glow" aria-hidden="true"></div>
                     <div class="alf-container alf-hero-grid">
                       <div class="alf-hero-copy">
-                        <span class="alf-eyebrow alf-enter" style="--alf-delay: 0ms">For anime and manga fans</span>
-                        <h1 class="alf-display alf-h1 alf-enter" style="--alf-delay: 80ms">Your anime world, in order
+                        <span class="alf-eyebrow alf-enter" style="--alf-delay: 0ms" data-i18n="hero.eyebrow">For anime and manga fans</span>
+                        <h1 class="alf-display alf-h1 alf-enter" style="--alf-delay: 80ms" data-i18n="hero.title">Your anime world, in order
                         </h1>
-                        <p class="alf-lede alf-enter" style="--alf-delay: 160ms">
+                        <p class="alf-lede alf-enter" style="--alf-delay: 160ms" data-i18n="hero.lede">
                           Organize anime and manga, track your progress, discover stories, and share favorites with
                           fellow fans.
                         </p>
                         <div class="alf-enter alf-waitlist-wrap" style="--alf-delay: 240ms">
                           <form class="alf-waitlist-form" data-waitlist-source="hero"
                             action="https://formsubmit.co/support@kirokuapp.com" method="POST" novalidate>
-                            <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform">
+                            <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform" data-i18n-aria-label="waitlist.platformAria">
                               <label class="alf-waitlist-pill">
                                 <input type="radio" name="platform" value="ios" checked />
                                 <span>iOS</span>
@@ -86,16 +111,17 @@
                               </label>
                               <label class="alf-waitlist-pill">
                                 <input type="radio" name="platform" value="both" />
-                                <span>Both</span>
+                                <span data-i18n="waitlist.platformBoth">Both</span>
                               </label>
                             </div>
                             <div class="alf-waitlist-row">
                               <input class="alf-waitlist-input" type="email" name="email" autocomplete="email"
-                                placeholder="you@example.com" aria-label="Email address" required />
+                                placeholder="you@example.com" data-i18n-placeholder="waitlist.emailPlaceholder"
+                                aria-label="Email address" data-i18n-aria-label="waitlist.emailAriaLabel" required />
                               <input class="alf-waitlist-hp" type="text" name="_honey" tabindex="-1"
                                 autocomplete="off" aria-hidden="true" />
                               <button type="submit" class="alf-btn alf-btn-primary alf-waitlist-submit">
-                                <span>Notify Me</span>
+                                <span data-i18n="waitlist.notifyMe">Notify Me</span>
                               </button>
                             </div>
                             <p class="alf-waitlist-status" role="status" aria-live="polite" hidden></p>
@@ -108,7 +134,7 @@
                                   </path>
                                 </svg>
                                 <span>App Store</span>
-                                <span class="alf-store-soon-tag">Coming Soon</span>
+                                <span class="alf-store-soon-tag" data-i18n="waitlist.comingSoon">Coming Soon</span>
                               </span>
                               <span class="alf-store-soon-pill" aria-disabled="true">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
@@ -118,7 +144,7 @@
                                   </path>
                                 </svg>
                                 <span>Google Play</span>
-                                <span class="alf-store-soon-tag">Coming Soon</span>
+                                <span class="alf-store-soon-tag" data-i18n="waitlist.comingSoon">Coming Soon</span>
                               </span>
                             </div>
                           </form>
@@ -136,19 +162,19 @@
                       <section id="features" class="alf-features" data-section="features" style="order: 1">
                         <div class="alf-container">
                           <div class="alf-reveal alf-section-head" style="--alf-delay: 0ms">
-                            <h2 class="alf-display alf-h2">A home for your fandom</h2>
-                            <p>Keep your collection, progress, and favorite stories close.</p>
+                            <h2 class="alf-display alf-h2" data-i18n="story.sectionTitle">A home for your fandom</h2>
+                            <p data-i18n="story.sectionSubtitle">Keep your collection, progress, and favorite stories close.</p>
                           </div>
 
                           <div class="alf-story" style="--alf-story-beats: 5">
                             <div class="alf-story-stage">
                               <div class="alf-story-copy">
-                                <ol class="alf-story-rail" aria-label="Feature steps">
-                                  <li class="is-active" title="Your fan life, together"></li>
-                                  <li title="Find your next story"></li>
-                                  <li title="Keep your progress"></li>
-                                  <li title="Make lists together"></li>
-                                  <li title="Show your favorites"></li>
+                                <ol class="alf-story-rail" aria-label="Feature steps" data-i18n-aria-label="story.railAria">
+                                  <li class="is-active" title="Your fan life, together" data-i18n-title="story.beat1Title"></li>
+                                  <li title="Find your next story" data-i18n-title="story.beat2Title"></li>
+                                  <li title="Keep your progress" data-i18n-title="story.beat3Title"></li>
+                                  <li title="Make lists together" data-i18n-title="story.beat4Title"></li>
+                                  <li title="Show your favorites" data-i18n-title="story.beat5Title"></li>
                                 </ol>
 
                       <article class="alf-story-panel is-active" aria-hidden="false">
@@ -161,8 +187,8 @@
                             </path>
                           </svg>
                         </span>
-                        <h3 class="alf-display">Your fan life, together</h3>
-                        <p>See quick links, taste matches, and recent activity gathered in one place.</p>
+                        <h3 class="alf-display" data-i18n="story.beat1Title">Your fan life, together</h3>
+                        <p data-i18n="story.beat1Desc">See quick links, taste matches, and recent activity gathered in one place.</p>
                       </article>
 
                           <article class="alf-story-panel" aria-hidden="true">
@@ -177,8 +203,8 @@
                                 </path>
                               </svg>
                             </span>
-                            <h3 class="alf-display">Find your next story</h3>
-                            <p>Browse trending anime and manga, then explore titles to add to your collection.</p>
+                            <h3 class="alf-display" data-i18n="story.beat2Title">Find your next story</h3>
+                            <p data-i18n="story.beat2Desc">Browse trending anime and manga, then explore titles to add to your collection.</p>
                           </article>
 
                             <article class="alf-story-panel" aria-hidden="true">
@@ -191,8 +217,8 @@
                                   </path>
                                 </svg>
                               </span>
-                              <h3 class="alf-display">Keep your progress</h3>
-                              <p>Follow where you are in a series and keep your anime and manga moving forward.</p>
+                              <h3 class="alf-display" data-i18n="story.beat3Title">Keep your progress</h3>
+                              <p data-i18n="story.beat3Desc">Follow where you are in a series and keep your anime and manga moving forward.</p>
                             </article>
 
                                 <article class="alf-story-panel" aria-hidden="true">
@@ -205,8 +231,8 @@
                                       </path>
                                     </svg>
                                   </span>
-                                  <h3 class="alf-display">Make lists together</h3>
-                                  <p>Create shared lists and invite friends to add their picks.</p>
+                                  <h3 class="alf-display" data-i18n="story.beat4Title">Make lists together</h3>
+                                  <p data-i18n="story.beat4Desc">Create shared lists and invite friends to add their picks.</p>
                                 </article>
 
                                 <article class="alf-story-panel" aria-hidden="true">
@@ -221,8 +247,8 @@
                                       </path>
                                     </svg>
                                   </span>
-                                  <h3 class="alf-display">Show your favorites</h3>
-                                  <p>Highlight favorite characters on your profile and share what you love with friends.
+                                  <h3 class="alf-display" data-i18n="story.beat5Title">Show your favorites</h3>
+                                  <p data-i18n="story.beat5Desc">Highlight favorite characters on your profile and share what you love with friends.
                                   </p>
                                 </article>
                               </div>
@@ -239,8 +265,8 @@
                           <section id="showcase" class="alf-showcase" data-section="showcase" style="order: 2">
                             <div class="alf-container">
                               <div class="alf-reveal alf-section-head" style="--alf-delay: 0ms">
-                                <h2 class="alf-display alf-h2">Kiroku in view</h2>
-                                <p>Discover stories, share lists, and see what friends are watching.</p>
+                                <h2 class="alf-display alf-h2" data-i18n="showcase.title">Kiroku in view</h2>
+                                <p data-i18n="showcase.subtitle">Discover stories, share lists, and see what friends are watching.</p>
                               </div>
                             </div>
 
@@ -328,11 +354,11 @@
                               <section id="cta" class="alf-cta" data-section="cta" style="order: 3">
                                 <div class="alf-container">
                                   <div class="alf-reveal alf-cta-panel" style="--alf-delay: 0ms">
-                                    <h2 class="alf-display alf-h2">Be first when Kiroku launches</h2>
-                                    <p class="alf-lede">Join the waitlist for early access on iOS and Android. One email at launch, zero spam.</p>
+                                    <h2 class="alf-display alf-h2" data-i18n="cta.title">Be first when Kiroku launches</h2>
+                                    <p class="alf-lede" data-i18n="cta.lede">Join the waitlist for early access on iOS and Android. One email at launch, zero spam.</p>
                                     <form class="alf-waitlist-form alf-waitlist-form-centered" data-waitlist-source="cta"
                                       action="https://formsubmit.co/support@kirokuapp.com" method="POST" novalidate>
-                                      <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform">
+                                      <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform" data-i18n-aria-label="waitlist.platformAria">
                                         <label class="alf-waitlist-pill">
                                           <input type="radio" name="platform" value="ios" checked />
                                           <span>iOS</span>
@@ -343,16 +369,17 @@
                                         </label>
                                         <label class="alf-waitlist-pill">
                                           <input type="radio" name="platform" value="both" />
-                                          <span>Both</span>
+                                          <span data-i18n="waitlist.platformBoth">Both</span>
                                         </label>
                                       </div>
                                       <div class="alf-waitlist-row">
                                         <input class="alf-waitlist-input" type="email" name="email" autocomplete="email"
-                                          placeholder="you@example.com" aria-label="Email address" required />
+                                          placeholder="you@example.com" data-i18n-placeholder="waitlist.emailPlaceholder"
+                                          aria-label="Email address" data-i18n-aria-label="waitlist.emailAriaLabel" required />
                                         <input class="alf-waitlist-hp" type="text" name="_honey" tabindex="-1"
                                           autocomplete="off" aria-hidden="true" />
                                         <button type="submit" class="alf-btn alf-btn-primary alf-waitlist-submit">
-                                          <span>Join Waitlist</span>
+                                          <span data-i18n="waitlist.joinWaitlist">Join Waitlist</span>
                                         </button>
                                       </div>
                                       <p class="alf-waitlist-status" role="status" aria-live="polite" hidden></p>
@@ -365,7 +392,7 @@
                                             </path>
                                           </svg>
                                           <span>App Store</span>
-                                          <span class="alf-store-soon-tag">Coming Soon</span>
+                                          <span class="alf-store-soon-tag" data-i18n="waitlist.comingSoon">Coming Soon</span>
                                         </span>
                                         <span class="alf-store-soon-pill" aria-disabled="true">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
@@ -375,7 +402,7 @@
                                             </path>
                                           </svg>
                                           <span>Google Play</span>
-                                          <span class="alf-store-soon-tag">Coming Soon</span>
+                                          <span class="alf-store-soon-tag" data-i18n="waitlist.comingSoon">Coming Soon</span>
                                         </span>
                                       </div>
                                     </form>
@@ -387,11 +414,11 @@
                 <!-- Footer -->
                 <footer class="alf-footer">
                   <div class="alf-container alf-footer-inner">
-                    <div>&copy; 2026 Kiroku</div>
+                    <div data-i18n="footer.copyright">&copy; 2026 Kiroku</div>
                     <ul class="alf-footer-links">
-                      <li><a href="/privacy">Privacy</a></li>
-                      <li><a href="/terms">Terms</a></li>
-                      <li><a href="/support">Support</a></li>
+                      <li><a href="/privacy" data-i18n="footer.privacy">Privacy</a></li>
+                      <li><a href="/terms" data-i18n="footer.terms">Terms</a></li>
+                      <li><a href="/support" data-i18n="footer.support">Support</a></li>
                       <li>
                         <a href="https://kirokuapp.com" target="_blank" rel="noopener noreferrer">
                           <span class="alf-sr-only">Website</span>
@@ -442,8 +469,8 @@
 
             <!-- Waitlist Modal -->
             <div id="alf-download-modal" class="alf-download-overlay" role="presentation" hidden>
-              <section class="alf-download-modal" role="dialog" aria-modal="true" aria-label="Join the Kiroku waitlist">
-                <button type="button" class="alf-download-close" aria-label="Close waitlist dialog">
+              <section class="alf-download-modal" role="dialog" aria-modal="true" aria-label="Join the Kiroku waitlist" data-i18n-aria-label="modal.dialogAria">
+                <button type="button" class="alf-download-close" aria-label="Close waitlist dialog" data-i18n-aria-label="modal.closeAria">
                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                     viewBox="0 0 256 256" aria-hidden="true">
                     <path
@@ -459,11 +486,11 @@
                     </path>
                   </svg>
                 </span>
-                <h2 class="alf-display">Get notified at launch</h2>
-                <p>Kiroku is coming soon to iOS and Android. Leave your email and we&rsquo;ll ping you the moment it drops.</p>
+                <h2 class="alf-display" data-i18n="modal.title">Get notified at launch</h2>
+                <p data-i18n="modal.lede">Kiroku is coming soon to iOS and Android. Leave your email and we&rsquo;ll ping you the moment it drops.</p>
                 <form class="alf-waitlist-form alf-waitlist-form-modal" data-waitlist-source="modal"
                   action="https://formsubmit.co/support@kirokuapp.com" method="POST" novalidate>
-                  <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform">
+                  <div class="alf-waitlist-platforms" role="radiogroup" aria-label="Preferred platform" data-i18n-aria-label="waitlist.platformAria">
                     <label class="alf-waitlist-pill">
                       <input type="radio" name="platform" value="ios" checked />
                       <span>iOS</span>
@@ -474,16 +501,17 @@
                     </label>
                     <label class="alf-waitlist-pill">
                       <input type="radio" name="platform" value="both" />
-                      <span>Both</span>
+                      <span data-i18n="waitlist.platformBoth">Both</span>
                     </label>
                   </div>
                   <div class="alf-waitlist-row">
                     <input class="alf-waitlist-input" type="email" name="email" autocomplete="email"
-                      placeholder="you@example.com" aria-label="Email address" required />
+                      placeholder="you@example.com" data-i18n-placeholder="waitlist.emailPlaceholder"
+                      aria-label="Email address" data-i18n-aria-label="waitlist.emailAriaLabel" required />
                     <input class="alf-waitlist-hp" type="text" name="_honey" tabindex="-1"
                       autocomplete="off" aria-hidden="true" />
                     <button type="submit" class="alf-btn alf-btn-primary alf-waitlist-submit">
-                      <span>Notify Me</span>
+                      <span data-i18n="waitlist.notifyMe">Notify Me</span>
                     </button>
                   </div>
                   <p class="alf-waitlist-status" role="status" aria-live="polite" hidden></p>
@@ -496,7 +524,7 @@
                         </path>
                       </svg>
                       <span>App Store</span>
-                      <span class="alf-store-soon-tag">Coming Soon</span>
+                      <span class="alf-store-soon-tag" data-i18n="waitlist.comingSoon">Coming Soon</span>
                     </span>
                     <span class="alf-store-soon-pill" aria-disabled="true">
                       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
@@ -506,13 +534,13 @@
                         </path>
                       </svg>
                       <span>Google Play</span>
-                      <span class="alf-store-soon-tag">Coming Soon</span>
+                      <span class="alf-store-soon-tag" data-i18n="waitlist.comingSoon">Coming Soon</span>
                     </span>
                   </div>
                 </form>
-  </section>
-  </div>
-  </div>
+              </section>
+            </div>
+          </div>
 
   <script type="module" src="/app.js"></script>
 </body>
