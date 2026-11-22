@@ -13,20 +13,37 @@ const FLAT_FRAME_PATH = "/components/iphone17-3d-flat.webp";
 const HERO_ROTATE_INTERVAL_MS = 3500;
 
 const HERO_SLIDES = [
+  // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+  // {
+  //   src: "/screenshots/anime-reels-evangelion.jpeg",
+  //   pose: { rotationX: -0.34, rotationY: 0.31, rotationZ: 0.09885163292860177 },
+  // },
+  // {
+  //   src: "/screenshots/find-friends-taste-matches.jpeg",
+  //   pose: { rotationX: -0.26, rotationY: 0.16, rotationZ: 0.045 },
+  // },
+  // {
+  //   src: "/screenshots/taste-compatibility-match.jpeg",
+  //   pose: { rotationX: -0.3, rotationY: -0.24, rotationZ: -0.07 },
+  // },
+  // {
+  //   src: "/screenshots/friend-profile-taste-match.jpeg",
+  //   pose: { rotationX: -0.22, rotationY: 0.24, rotationZ: 0.065 },
+  // },
   {
-    src: "/screenshots/anime-reels-evangelion.jpeg",
+    src: "/screenshots/home-dashboard.jpeg",
     pose: { rotationX: -0.34, rotationY: 0.31, rotationZ: 0.09885163292860177 },
   },
   {
-    src: "/screenshots/find-friends-taste-matches.jpeg",
+    src: "/screenshots/anime-details-tracking.jpeg",
     pose: { rotationX: -0.26, rotationY: 0.16, rotationZ: 0.045 },
   },
   {
-    src: "/screenshots/taste-compatibility-match.jpeg",
+    src: "/screenshots/create-shared-list.jpeg",
     pose: { rotationX: -0.3, rotationY: -0.24, rotationZ: -0.07 },
   },
   {
-    src: "/screenshots/friend-profile-taste-match.jpeg",
+    src: "/screenshots/rank-tiers-progression.jpeg",
     pose: { rotationX: -0.22, rotationY: 0.24, rotationZ: 0.065 },
   },
 ];
@@ -35,7 +52,9 @@ const HERO_POSE = HERO_SLIDES[0].pose;
 
 const STORY_BEATS = [
   {
-    src: "/screenshots/taste-compatibility-match.jpeg",
+    // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+    // src: "/screenshots/taste-compatibility-match.jpeg",
+    src: "/screenshots/home-dashboard.jpeg",
     pose: { rotationX: 0, rotationY: -0.3, rotationZ: 0 },
     scale: 1,
     focus: "full",
@@ -1775,6 +1794,7 @@ initI18n();
 initScrollReveal();
 initHeroSection(isMobile);
 initStorySection(isMobile);
-initMarquee();
+// NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+// initMarquee();
 initDownloadModal();
 initWaitlistForms();

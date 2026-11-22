@@ -18,8 +18,11 @@ export const STORAGE_KEY = "kiroku_lang";
 export const translations = {
   en: {
     meta: {
-      title: "Kiroku (記録) — Social Anime & Manga Tracker, Taste Match & Reels",
-      description: "Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking."
+      // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+      // title: "Kiroku (記録) — Social Anime & Manga Tracker, Taste Match & Reels",
+      // description: "Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking."
+      title: "Kiroku (記録) — Social Anime & Manga Tracker",
+      description: "Track your anime and manga journey, build shared lists with friends, discover trending stories, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking."
     },
     nav: {
       brandAria: "Kiroku home",
@@ -51,7 +54,9 @@ export const translations = {
       sectionSubtitle: "Keep your collection, progress, and favorite stories close.",
       railAria: "Feature steps",
       beat1Title: "Your fan life, together",
-      beat1Desc: "See quick links, taste matches, and recent activity gathered in one place.",
+      // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+      // beat1Desc: "See quick links, taste matches, and recent activity gathered in one place.",
+      beat1Desc: "See quick links, tracking progress, and recent activity gathered in one place.",
       beat2Title: "Find your next story",
       beat2Desc: "Browse trending anime and manga, then explore titles to add to your collection.",
       beat3Title: "Keep your progress",
@@ -110,8 +115,11 @@ export const translations = {
   },
   tr: {
     meta: {
-      title: "Kiroku (記録) — Sosyal Anime ve Manga Takibi, Taste Match ve Reels",
-      description: "Anime ve manga yolculuğunuzu takip edin, Taste Match™ ile anime ruh ikizinizi keşfedin, tema müzikli dikey Anime Reels akışını deneyimleyin ve tek dokunuşla MyAnimeList ile senkronize olun. Sıfır reklam takibiyle çok yakında iOS ve Android'de."
+      // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+      // title: "Kiroku (記録) — Sosyal Anime ve Manga Takibi, Taste Match ve Reels",
+      // description: "Anime ve manga yolculuğunuzu takip edin, Taste Match™ ile anime ruh ikizinizi keşfedin, tema müzikli dikey Anime Reels akışını deneyimleyin ve tek dokunuşla MyAnimeList ile senkronize olun. Sıfır reklam takibiyle çok yakında iOS ve Android'de."
+      title: "Kiroku (記録) — Sosyal Anime ve Manga Takibi",
+      description: "Anime ve manga yolculuğunuzu takip edin, arkadaşlarınızla ortak listeler oluşturun, trend hikayeleri keşfedin ve tek dokunuşla MyAnimeList ile senkronize olun. Sıfır reklam takibiyle çok yakında iOS ve Android'de."
     },
     nav: {
       brandAria: "Kiroku ana sayfa",
@@ -143,7 +151,9 @@ export const translations = {
       sectionSubtitle: "Koleksiyonunuzu, ilerlemenizi ve en sevdiğiniz hikayeleri elinizin altında tutun.",
       railAria: "Özellik adımları",
       beat1Title: "Tüm fan dünyanız bir arada",
-      beat1Desc: "Hızlı bağlantıları, zevk eşleşmelerini ve son etkinlikleri tek bir yerde görün.",
+      // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+      // beat1Desc: "Hızlı bağlantıları, zevk eşleşmelerini ve son etkinlikleri tek bir yerde görün.",
+      beat1Desc: "Hızlı bağlantıları, takip ilerlemenizi ve son etkinlikleri tek bir yerde görün.",
       beat2Title: "Sıradaki hikayenizi bulun",
       beat2Desc: "Trend olan anime ve mangalara göz atın, koleksiyonunuza ekleyeceğiniz yeni seriler keşfedin.",
       beat3Title: "İlerlemenizi kaydedin",
@@ -202,8 +212,11 @@ export const translations = {
   },
   ja: {
     meta: {
-      title: "Kiroku (記録) — アニメ・マンガ記録＆ソーシャル発見・Taste Match・Reels",
-      description: "アニメ・マンガの記録、Taste Match™による好みの合う仲間との出会い、テーマ曲付き縦型Anime Reels、MyAnimeListワンタップ連携。広告トラッキングゼロでiOS＆Android近日登場。"
+      // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+      // title: "Kiroku (記録) — アニメ・マンガ記録＆ソーシャル発見・Taste Match・Reels",
+      // description: "アニメ・マンガの記録、Taste Match™による好みの合う仲間との出会い、テーマ曲付き縦型Anime Reels、MyAnimeListワンタップ連携。広告トラッキングゼロでiOS＆Android近日登場。"
+      title: "Kiroku (記録) — アニメ・マンガ記録＆ソーシャル発見",
+      description: "アニメ・マンガの記録、友達との共有リスト作成、話題の作品の発見、MyAnimeListワンタップ連携。広告トラッキングゼロでiOS＆Android近日登場。"
     },
     nav: {
       brandAria: "Kiroku ホーム",
@@ -235,7 +248,9 @@ export const translations = {
       sectionSubtitle: "コレクション、進捗、お気に入りの物語をいつでも手元に。",
       railAria: "機能のステップ",
       beat1Title: "ファンの日常を、ひとつに",
-      beat1Desc: "クイックリンク、テイストマッチ、最新のアクティビティをひとまとめに表示。",
+      // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
+      // beat1Desc: "クイックリンク、テイストマッチ、最新のアクティビティをひとまとめに表示。",
+      beat1Desc: "クイックリンク、視聴・読書の進捗、最新のアクティビティをひとまとめに表示。",
       beat2Title: "次の物語と出会う",
       beat2Desc: "トレンドのアニメやマンガをチェックし、コレクションに加えたい作品を発見。",
       beat3Title: "進捗をスマートに管理",
