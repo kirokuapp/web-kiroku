@@ -20,7 +20,7 @@ export const translations = {
     meta: {
       // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
       // title: "Kiroku (記録) — Social Anime & Manga Tracker, Taste Match & Reels",
-      // description: "Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels with theme song previews, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking."
+      // description: "Track your anime and manga journey, discover your anime soulmates with Taste Match™, explore vertical Anime Reels, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking."
       title: "Kiroku (記録) — Social Anime & Manga Tracker",
       description: "Track your anime and manga journey, build shared lists with friends, discover trending stories, and sync with MyAnimeList in one tap. Coming soon to iOS and Android with zero ad tracking."
     },
@@ -103,13 +103,13 @@ export const translations = {
     privacyPage: {
       title: "Privacy Policy — Kiroku (記録)",
       h1: "Privacy",
-      meta: "Kiroku · Last updated November 15, 2026",
+      meta: "Kiroku · Last updated November 28, 2026",
       description: "Kiroku Privacy Policy. Details on what information we collect, how we use it, zero third-party ad tracking, and self-serve account deletion."
     },
     termsPage: {
       title: "Terms of Service & EULA — Kiroku (記録)",
       h1: "Terms",
-      meta: "Kiroku · Last updated November 15, 2026",
+      meta: "Kiroku · Last updated November 28, 2026",
       description: "Kiroku End User License Agreement (EULA) and Terms of Service. Zero tolerance policy, UGC guidelines, and safety controls."
     }
   },
@@ -117,7 +117,7 @@ export const translations = {
     meta: {
       // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
       // title: "Kiroku (記録) — Sosyal Anime ve Manga Takibi, Taste Match ve Reels",
-      // description: "Anime ve manga yolculuğunuzu takip edin, Taste Match™ ile anime ruh ikizinizi keşfedin, tema müzikli dikey Anime Reels akışını deneyimleyin ve tek dokunuşla MyAnimeList ile senkronize olun. Sıfır reklam takibiyle çok yakında iOS ve Android'de."
+      // description: "Anime ve manga yolculuğunuzu takip edin, Taste Match™ ile anime ruh ikizinizi keşfedin, dikey Anime Reels akışını deneyimleyin ve tek dokunuşla MyAnimeList ile senkronize olun. Sıfır reklam takibiyle çok yakında iOS ve Android'de."
       title: "Kiroku (記録) — Sosyal Anime ve Manga Takibi",
       description: "Anime ve manga yolculuğunuzu takip edin, arkadaşlarınızla ortak listeler oluşturun, trend hikayeleri keşfedin ve tek dokunuşla MyAnimeList ile senkronize olun. Sıfır reklam takibiyle çok yakında iOS ve Android'de."
     },
@@ -200,13 +200,13 @@ export const translations = {
     privacyPage: {
       title: "Gizlilik Politikası — Kiroku (記録)",
       h1: "Gizlilik",
-      meta: "Kiroku · Son güncelleme: 15 Kasım 2026",
+      meta: "Kiroku · Son güncelleme: 28 Kasım 2026",
       description: "Kiroku Gizlilik Politikası. Toplanan bilgiler, kullanım amaçları, üçüncü taraf reklam takibinin olmaması ve hesabı kendiniz silebilmeniz hakkında bilgi."
     },
     termsPage: {
       title: "Kullanım Koşulları ve EULA — Kiroku (記録)",
       h1: "Kullanım Koşulları",
-      meta: "Kiroku · Son güncelleme: 15 Kasım 2026",
+      meta: "Kiroku · Son güncelleme: 28 Kasım 2026",
       description: "Kiroku Hizmet Koşulları ve Son Kullanıcı Lisans Sözleşmesi (EULA). Sıfır tolerans politikası, kullanıcı içerikleri kuralları ve güvenlik denetimleri."
     }
   },
@@ -214,7 +214,7 @@ export const translations = {
     meta: {
       // NOT: Canlıya çıkınca yorum satırları kaldırılacak, kopyalanmasın diye yorum satırına alındı.
       // title: "Kiroku (記録) — アニメ・マンガ記録＆ソーシャル発見・Taste Match・Reels",
-      // description: "アニメ・マンガの記録、Taste Match™による好みの合う仲間との出会い、テーマ曲付き縦型Anime Reels、MyAnimeListワンタップ連携。広告トラッキングゼロでiOS＆Android近日登場。"
+      // description: "アニメ・マンガの記録、Taste Match™による好みの合う仲間との出会い、縦型Anime Reels、MyAnimeListワンタップ連携。広告トラッキングゼロでiOS＆Android近日登場。"
       title: "Kiroku (記録) — アニメ・マンガ記録＆ソーシャル発見",
       description: "アニメ・マンガの記録、友達との共有リスト作成、話題の作品の発見、MyAnimeListワンタップ連携。広告トラッキングゼロでiOS＆Android近日登場。"
     },
@@ -297,13 +297,13 @@ export const translations = {
     privacyPage: {
       title: "プライバシーポリシー — Kiroku (記録)",
       h1: "プライバシー",
-      meta: "Kiroku · 最終更新日: 2026年11月15日",
+      meta: "Kiroku · 最終更新日: 2026年11月28日",
       description: "Kirokuのプライバシーポリシー。収集する情報、その利用方法、第三者広告トラッキングを行わないこと、アカウントのセルフ削除について説明します。"
     },
     termsPage: {
       title: "利用規約＆EULA — Kiroku (記録)",
       h1: "利用規約",
-      meta: "Kiroku · 最終更新日: 2026年11月15日",
+      meta: "Kiroku · 最終更新日: 2026年11月28日",
       description: "Kiroku利用規約およびエンドユーザー使用許諾契約（EULA）。ゼロトレランス方針、ユーザー投稿のルール、安全対策について説明します。"
     }
   }
